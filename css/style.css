@@ -13,3 +13,21 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: black;
   color: #EDEDED; }
+
+.about {
+  background-color: #DA0037; }
+
+.contact {
+  background-color: #444444; }
+
+.navbar {
+  background-color: #171717; }
+
+.home {
+  background-color: #444444; }
+
+.projects {
+  background-color: #30475E; }
+
+.skills {
+  background-color: #F05454; }
