@@ -47,6 +47,8 @@ html {
   .navbar__btn {
     all: unset;
     cursor: pointer;
+    align-self: start;
+    justify-self: start;
     transition: all .2s; }
   .navbar__btn > img {
     width: 4.5rem; }
