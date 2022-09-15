@@ -37,21 +37,34 @@ html {
   background-color: #444444; }
 
 .navbar {
-  background-color: #171717; }
+  background-color: #171717;
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: min-content repeat(2, minmax(min-content, 1fr));
+  grid-gap: 2rem; }
   .navbar__logo {
-    width: 4.5rem;
-    -webkit-filter: invert(100%);
-    filter: invert(100%); }
+    width: 4.5rem; }
   .navbar__btn {
     all: unset;
     cursor: pointer;
     transition: all .2s; }
   .navbar__btn > img {
-    width: 4.5rem;
-    -webkit-filter: invert(100%);
-    filter: invert(100%); }
+    width: 4.5rem; }
   .navbar__btn:active {
     transform: translateY(2px); }
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .navbar__menu--link {
+    color: #EDEDED;
+    text-decoration: none; }
+
+.dark-mode {
+  -webkit-filter: invert(100%);
+  filter: invert(100%); }
 
 .home {
   background-color: #444444; }
