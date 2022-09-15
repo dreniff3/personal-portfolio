@@ -38,6 +38,10 @@ html {
 
 .navbar {
   background-color: #171717; }
+  .navbar__logo {
+    width: 4.5rem;
+    -webkit-filter: invert(100%);
+    filter: invert(100%); }
 
 .home {
   background-color: #444444; }
