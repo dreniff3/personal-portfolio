@@ -1,3 +1,7 @@
+// FONT VARIABLES
+$stylistic-font: 'Pangolin', 'Courier New', monospace;
+$primary-font: 'Poppins', sans-serif;
+
 *,
 *::before, 
 *::after {
@@ -9,4 +13,8 @@
 html {
     box-sizing: border-box;
     font-size: 62.5% // 1rem = 10px
+}
+
+body {
+    font-family: $primary-font; // Poppins
 }
