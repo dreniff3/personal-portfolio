@@ -2,6 +2,7 @@
 $color-primary-light: #EDEDED;
 $color-primary-medium: #444444;
 $color-primary-dark: #171717;
+$color-primary-darkest: black;
 
 $color-secondary: #DA0037;
 $color-secondary-light: #F05454;
@@ -28,4 +29,6 @@ html {
 
 body {
     font-family: $primary-font; // Poppins
+    background-color: $color-primary-darkest;
+    color: $color-primary-light;
 }
