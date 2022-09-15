@@ -42,6 +42,16 @@ html {
     width: 4.5rem;
     -webkit-filter: invert(100%);
     filter: invert(100%); }
+  .navbar__btn {
+    all: unset;
+    cursor: pointer;
+    transition: all .2s; }
+  .navbar__btn > img {
+    width: 4.5rem;
+    -webkit-filter: invert(100%);
+    filter: invert(100%); }
+  .navbar__btn:active {
+    transform: translateY(2px); }
 
 .home {
   background-color: #444444; }
