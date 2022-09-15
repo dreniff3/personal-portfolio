@@ -32,9 +32,22 @@
     justify-content: space-around;
     align-items: center;
 
-    &--link {
+    &-item {
+        margin: 0 1rem;
+    }
+
+    &-link:link,
+    &-link:visited {
         color: $color-primary-light;
+        font-size: 1.4rem;
+        font-weight: 600;
         text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &-link:hover, 
+    &-link.active {
+        border-bottom: solid 5px $color-secondary;
     }
 }
 

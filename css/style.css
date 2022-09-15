@@ -58,9 +58,16 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  .navbar__menu--link {
+  .navbar__menu-item {
+    margin: 0 1rem; }
+  .navbar__menu-link:link, .navbar__menu-link:visited {
     color: #EDEDED;
-    text-decoration: none; }
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase; }
+  .navbar__menu-link:hover, .navbar__menu-link.active {
+    border-bottom: solid 5px #DA0037; }
 
 .dark-mode {
   -webkit-filter: invert(100%);
