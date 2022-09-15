@@ -27,8 +27,32 @@ html {
     font-size: 62.5% // 1rem = 10px
 }
 
-body {
+.container {
     font-family: $primary-font; // Poppins
     background-color: $color-primary-darkest;
     color: $color-primary-light;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header'
+                         'main'
+                         'footer';
+}
+
+.container > header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+}
+
+.container > main {
+    grid-area: main;
+    
+    // for testing purposes
+    height: 1000px;
+}
+
+.container > footer {
+    grid-area: footer;
 }

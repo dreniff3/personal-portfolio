@@ -9,10 +9,26 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-body {
+.container {
   font-family: "Poppins", sans-serif;
   background-color: black;
-  color: #EDEDED; }
+  color: #EDEDED;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'header' 'main' 'footer'; }
+
+.container > header {
+  grid-area: header;
+  position: sticky;
+  top: 0; }
+
+.container > main {
+  grid-area: main;
+  height: 1000px; }
+
+.container > footer {
+  grid-area: footer; }
 
 .about {
   background-color: #DA0037; }
