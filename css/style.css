@@ -71,9 +71,23 @@ html {
     font-size: 1.4rem;
     font-weight: 600;
     text-decoration: none;
-    text-transform: uppercase; }
-  .navbar__menu-link:hover, .navbar__menu-link.active {
-    border-bottom: solid 5px #DA0037; }
+    text-transform: uppercase;
+    position: relative; }
+  .navbar__menu-link::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    height: 1rem;
+    width: 3px;
+    background-color: #DA0037;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .navbar__menu-link:hover::before, .navbar__menu-link.active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .navbar__menu-link:active::before {
+    background-color: #F05454; }
 
 .dark-mode > header > .navbar > .navbar__logo,
 .dark-mode > header > .navbar > .navbar__btn {

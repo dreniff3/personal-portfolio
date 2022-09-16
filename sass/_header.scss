@@ -44,11 +44,34 @@
         font-weight: 600;
         text-decoration: none;
         text-transform: uppercase;
+
+        // necessary for ::before pseudo-element to have absolute positioning
+        position: relative;
     }
 
-    &-link:hover, 
-    &-link.active {
-        border-bottom: solid 5px $color-secondary;
+    &-link::before {
+        content: ""; // necessary for displaying ::before pseudo-element
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        height: 1rem;
+        width: 3px;
+        background-color: $color-secondary;
+        // hide element when not hovered
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                    background-color .1s;
+    }
+
+    &-link:hover::before,
+    &-link.active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &-link:active::before {
+        background-color: $color-secondary-light;
     }
 }
 
