@@ -29,8 +29,8 @@ html {
 
 .container {
     font-family: $primary-font; // Poppins
-    background-color: $color-primary-darkest;
-    color: $color-primary-light;
+    background-color: $color-primary-light;
+    color: $color-primary-darkest;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -55,4 +55,9 @@ html {
 
 .container > footer {
     grid-area: footer;
+}
+
+.container.dark-mode {
+    background-color: $color-primary-darkest;
+    color: $color-primary-light;
 }

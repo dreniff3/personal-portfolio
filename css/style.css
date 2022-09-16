@@ -11,8 +11,8 @@ html {
 
 .container {
   font-family: "Poppins", sans-serif;
-  background-color: black;
-  color: #EDEDED;
+  background-color: #EDEDED;
+  color: black;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -29,6 +29,10 @@ html {
 
 .container > footer {
   grid-area: footer; }
+
+.container.dark-mode {
+  background-color: black;
+  color: #EDEDED; }
 
 .about {
   background-color: #DA0037; }
@@ -63,7 +67,7 @@ html {
   .navbar__menu-item {
     margin: 0 1rem; }
   .navbar__menu-link:link, .navbar__menu-link:visited {
-    color: #EDEDED;
+    color: inherit;
     font-size: 1.4rem;
     font-weight: 600;
     text-decoration: none;
@@ -71,7 +75,8 @@ html {
   .navbar__menu-link:hover, .navbar__menu-link.active {
     border-bottom: solid 5px #DA0037; }
 
-.dark-mode {
+.dark-mode > header > .navbar > .navbar__logo,
+.dark-mode > header > .navbar > .navbar__btn {
   -webkit-filter: invert(100%);
   filter: invert(100%); }
 
