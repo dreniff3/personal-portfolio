@@ -39,7 +39,7 @@
 
     &-link:link,
     &-link:visited {
-        color: inherit;
+        color: inherit; // simplifies dark-mode/light-mode change
         font-size: 1.4rem;
         font-weight: 600;
         text-decoration: none;
@@ -54,6 +54,7 @@
 
 .dark-mode > header > .navbar > .navbar__logo,
 .dark-mode > header > .navbar > .navbar__btn {
+    // invert png so black becomes white, and vice versa
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }

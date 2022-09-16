@@ -39,6 +39,7 @@ html {
                          'main'
                          'footer';
 
+    // smoother dark-mode/light-mode transition
     transition: background-color .5s ease;
 }
 
