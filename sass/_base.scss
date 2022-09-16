@@ -38,6 +38,8 @@ html {
     grid-template-areas: 'header'
                          'main'
                          'footer';
+
+    transition: background-color .5s ease;
 }
 
 .container > header {

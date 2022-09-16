@@ -16,7 +16,8 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: 'header' 'main' 'footer'; }
+  grid-template-areas: 'header' 'main' 'footer';
+  transition: background-color .5s ease; }
 
 .container > header {
   grid-area: header;
@@ -41,7 +42,6 @@ html {
   background-color: #444444; }
 
 .navbar {
-  background-color: #171717;
   padding: 1rem 1.5rem;
   display: grid;
   grid-template-columns: min-content repeat(2, minmax(min-content, 1fr));
@@ -57,7 +57,7 @@ html {
   .navbar__btn > img {
     width: 4.5rem; }
   .navbar__btn:active {
-    transform: translateY(2px); }
+    transform: translateY(5px); }
 
 .navbar__menu {
   list-style: none;
