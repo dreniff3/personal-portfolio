@@ -15,7 +15,7 @@
         align-self: start;
         justify-self: start;
 
-        transition: all .2s;
+        transition: all .4s;
     }
 
     &__btn > img {
@@ -23,7 +23,7 @@
     }
 
     &__btn:active {
-        transform: translateY(5px);
+        transform: translateY(5px) scale(.6);
     }
 }
 

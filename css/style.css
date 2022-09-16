@@ -53,11 +53,11 @@ html {
     cursor: pointer;
     align-self: start;
     justify-self: start;
-    transition: all .2s; }
+    transition: all .4s; }
   .navbar__btn > img {
     width: 4.5rem; }
   .navbar__btn:active {
-    transform: translateY(5px); }
+    transform: translateY(5px) scale(0.6); }
 
 .navbar__menu {
   list-style: none;
