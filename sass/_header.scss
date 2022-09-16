@@ -1,4 +1,6 @@
 .navbar {
+    background-color: $color-primary-light;
+    box-shadow: 0 .5rem 2rem rgba(0,0,0, .1);
     padding: 1rem 1.5rem;
 
     display: grid;
@@ -73,6 +75,11 @@
     &-link:active::before {
         background-color: $color-secondary-light;
     }
+}
+
+.dark-mode > header > .navbar {
+    background-color: $color-primary-dark;
+    box-sizing: none;
 }
 
 .dark-mode > header > .navbar > .navbar__logo,

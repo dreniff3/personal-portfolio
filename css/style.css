@@ -39,9 +39,12 @@ html {
   background-color: #DA0037; }
 
 .contact {
-  background-color: #444444; }
+  background-color: #202020;
+  color: #EDEDED; }
 
 .navbar {
+  background-color: #EDEDED;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   padding: 1rem 1.5rem;
   display: grid;
   grid-template-columns: min-content repeat(2, minmax(min-content, 1fr));
@@ -88,6 +91,10 @@ html {
     width: 100%; }
   .navbar__menu-link:active::before {
     background-color: #F05454; }
+
+.dark-mode > header > .navbar {
+  background-color: #202020;
+  box-sizing: none; }
 
 .dark-mode > header > .navbar > .navbar__logo,
 .dark-mode > header > .navbar > .navbar__btn {
