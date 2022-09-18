@@ -1,0 +1,40 @@
+/*
+*
+GLITCH TEXT
+*
+*/
+.glitch {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    // so span element can be position: absolute
+    position: relative;
+
+    /* glitch effect */
+    text-shadow: 
+        /* we use ems so the effect scales if we change font-size */
+        .05em 0 0 rgba(255,0,0,.75),
+        -.025em -.05em 0 rgba(0,255,0,.75),
+        .025em .05em 0 rgba(0,0,255,.75);
+}
+
+/* hide span behind glitch text */
+.glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch span:first-child {
+
+}
+
+.glitch span:last-child {
+
+}
+
+/*
+*
+TYPEWRITER
+*
+*/

@@ -36,6 +36,30 @@ html {
   background-color: black;
   color: #EDEDED; }
 
+/*
+*
+GLITCH TEXT
+*
+*/
+.glitch {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  /* glitch effect */
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+
+/* hide span behind glitch text */
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/*
+*
+TYPEWRITER
+*
+*/
 .about {
   padding-top: 7rem;
   background-color: #DA0037; }
@@ -105,7 +129,18 @@ html {
 
 .home {
   padding-top: 7rem;
-  background-color: #444444; }
+  background-color: #444444;
+  display: grid;
+  grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem; }
+  .home__data {
+    background-color: purple;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center; }
+  .home__img {
+    background-color: green;
+    grid-column: 3 / 4; }
 
 .projects {
   padding-top: 7rem;
