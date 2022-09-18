@@ -11,11 +11,10 @@
         grid-column: 2 / 3;
 
         display: grid;
-        grid-template-rows: 30rem 1fr;
+        grid-template-rows: 30rem 1fr 10rem;
         grid-gap: 3rem;
 
         justify-content: center;
-        // place-items: center;
 
     }
 
@@ -35,12 +34,39 @@
             height: 55rem;
             object-fit: cover;
 
-            // clip-path: polygon(0 50%, 40% 0, 100% 30%, 90% 90%, 25% 100%);
             clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 
-            // box-shadow: 2rem 2rem 2rem rgba(0,0,0, .1);
-
             animation: open 1s ease-out 1;
+        }
+    }
+
+    &__social {
+        display: grid;
+        grid-template-columns: 10rem repeat(3, 1fr);
+        grid-gap: 5rem;
+
+        img {
+            width: 8rem;
+            height: 3.5rem;
+            opacity: .7;
+
+            grid-column: 2 / 3;
+        }
+
+        img.linkedin-logo {
+            width: 3.5rem;
+            height: 3.5rem;
+            opacity: .7;
+
+            grid-column: 3 / 4;
+
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+        }
+
+        img:hover,
+        img:active {
+            opacity: 1;
         }
     }
 }
@@ -53,4 +79,14 @@
         clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 
     }
+}
+
+.dark-mode > main > .home > .home__data > .home__social > a > img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.dark-mode > main > .home > .home__data > .home__social > a > img.linkedin-logo {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
 }
