@@ -221,11 +221,29 @@ TYPEWRITER
     font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 20rem 1fr;
+    grid-template-rows: 30rem 1fr;
     grid-gap: 3rem;
     justify-content: center; }
   .home__img {
-    grid-column: 3 / 4; }
+    grid-column: 3 / 4;
+    display: grid;
+    justify-content: center;
+    align-items: center; }
+    .home__img > img {
+      position: relative;
+      display: block;
+      border-radius: 10%;
+      width: 55rem;
+      height: 55rem;
+      object-fit: cover;
+      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+      animation: open 1s ease-out 1; }
+
+@keyframes open {
+  0% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); }
+  100% {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); } }
 
 .projects {
   padding-top: 7rem;
