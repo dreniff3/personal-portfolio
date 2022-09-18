@@ -163,5 +163,15 @@ TYPEWRITER
     height: $home-font-size;
     background-color: orangered;
 
+    animation: blink .7s step-end infinite;
+}
 
+@keyframes blink {
+    // same starting and ending properties
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: orangered;
+    }
 }
