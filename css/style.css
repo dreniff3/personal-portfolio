@@ -43,19 +43,80 @@ GLITCH TEXT
 *
 */
 .glitch {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: bold;
   text-transform: uppercase;
   align-self: end;
   position: relative;
   /* glitch effect */
-  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 1000ms infinite; }
 
 /* hide span behind glitch text */
 .glitch span {
   position: absolute;
   top: 0;
   left: 0; }
+
+.glitch span:first-child {
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  opacity: .8;
+  animation: glitch 800ms infinite, glitch-span-1 800ms infinite; }
+
+.glitch span:last-child {
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.05em, 0.025em);
+  opacity: .8;
+  animation: glitch 1200ms infinite, glitch-span-2 1000ms infinite; }
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75); } }
+
+@keyframes glitch-span-1 {
+  0% {
+    transform: translate(-0.025em, -0.0125em); }
+  14% {
+    transform: translate(-0.025em, -0.0125em); }
+  15% {
+    transform: translate(0, 0); }
+  49% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0.025em, 0.0125em); }
+  99% {
+    transform: translate(0.025em, 0.0125em); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes glitch-span-2 {
+  0% {
+    transform: translate(0.025em, 0.0125em); }
+  14% {
+    transform: translate(0.025em, 0.0125em); }
+  15% {
+    transform: translate(0, 0); }
+  49% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(-0.025em, -0.0125em); }
+  99% {
+    transform: translate(-0.025em, -0.0125em); }
+  100% {
+    transform: translate(0, 0); } }
 
 /*
 *
@@ -68,14 +129,14 @@ TYPEWRITER
 .text {
   display: inline-block;
   vertical-align: middle;
-  font-size: 5rem;
+  font-size: 6rem;
   letter-spacing: 2px; }
 
 .cursor {
   display: inline-block;
   vertical-align: middle;
   width: 3px;
-  height: 5rem;
+  height: 6rem;
   background-color: orangered; }
 
 .about {
@@ -147,11 +208,9 @@ TYPEWRITER
 
 .home {
   padding-top: 7rem;
-  background-color: #444444;
   display: grid;
   grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem; }
   .home__data {
-    background-color: purple;
     font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
     grid-column: 2 / 3;
     display: grid;
@@ -159,7 +218,6 @@ TYPEWRITER
     grid-gap: 3rem;
     justify-content: center; }
   .home__img {
-    background-color: green;
     grid-column: 3 / 4; }
 
 .projects {

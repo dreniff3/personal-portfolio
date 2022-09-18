@@ -1,13 +1,10 @@
 .home {
     padding-top: 7rem;
-    background-color: $color-primary-medium;
 
     display: grid;
     grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem;
 
     &__data {
-        // for testing purposes
-        background-color: purple;
 
         font-family: $code-font;
 
@@ -23,8 +20,6 @@
     }
 
     &__img {
-        // for testing purposes
-        background-color: green;
 
         grid-column: 3 / 4;
     }
