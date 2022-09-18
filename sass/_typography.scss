@@ -7,6 +7,7 @@ GLITCH TEXT
     font-size: 5rem;
     font-weight: bold;
     text-transform: uppercase;
+    align-self: end;
     // so span element can be position: absolute
     position: relative;
 
@@ -38,3 +39,24 @@ GLITCH TEXT
 TYPEWRITER
 *
 */
+.typewriter {
+    // overflow: hidden;
+    align-self: start;
+}
+
+.text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 5rem;
+    letter-spacing: 2px;
+}
+
+.cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 5rem;
+    background-color: orangered;
+
+
+}

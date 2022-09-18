@@ -22,7 +22,8 @@ html {
 .container > header {
   grid-area: header;
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 9; }
 
 .container > main {
   grid-area: main;
@@ -45,6 +46,7 @@ GLITCH TEXT
   font-size: 5rem;
   font-weight: bold;
   text-transform: uppercase;
+  align-self: end;
   position: relative;
   /* glitch effect */
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
@@ -60,6 +62,22 @@ GLITCH TEXT
 TYPEWRITER
 *
 */
+.typewriter {
+  align-self: start; }
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 5rem;
+  letter-spacing: 2px; }
+
+.cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 5rem;
+  background-color: orangered; }
+
 .about {
   padding-top: 7rem;
   background-color: #DA0037; }
@@ -134,10 +152,12 @@ TYPEWRITER
   grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem; }
   .home__data {
     background-color: purple;
+    font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    place-items: center; }
+    grid-template-rows: 20rem 1fr;
+    grid-gap: 3rem;
+    justify-content: center; }
   .home__img {
     background-color: green;
     grid-column: 3 / 4; }
