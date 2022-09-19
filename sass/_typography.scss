@@ -188,4 +188,7 @@ TYPEWRITER
 .item-title {
     font-size: $smaller-title-font-size;
     font-family: 'Montserrat', monospace;
+    text-transform: uppercase;
+    line-height: 20%;
+    letter-spacing: .2rem;
 }

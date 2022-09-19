@@ -155,7 +155,10 @@ TYPEWRITER
 
 .item-title {
   font-size: 1.5rem;
-  font-family: 'Montserrat', monospace; }
+  font-family: 'Montserrat', monospace;
+  text-transform: uppercase;
+  line-height: 20%;
+  letter-spacing: .2rem; }
 
 .about {
   padding-top: 7rem;
@@ -351,7 +354,9 @@ TYPEWRITER
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 25% repeat(3, 1fr) 25%;
-    grid-template-rows: .15fr 1fr .15fr; }
+    grid-template-rows: .15fr 1fr .15fr;
+    justify-content: center;
+    align-items: center; }
   .skills__row-1 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -381,8 +386,8 @@ TYPEWRITER
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 100px;
-    width: 160px;
+    padding: .8rem 5rem 1.2rem;
+    width: 18rem;
     /*
         *
             Gradient Border: 
@@ -400,6 +405,11 @@ TYPEWRITER
     background: linear-gradient(#EDEDED, #EDEDED) padding-box, linear-gradient(to bottom right, #30475E, #DA0037) border-box;
     border-radius: 10%;
     border: 3.5px solid transparent; }
+
+.skills__item > img {
+  padding-bottom: 1.5rem;
+  width: auto;
+  height: 8rem; }
 
 .dark-mode > main > .skills > h2::before {
   top: 4.25rem;
