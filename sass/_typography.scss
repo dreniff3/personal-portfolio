@@ -179,6 +179,7 @@ TYPEWRITER
 .section-title {
     font-size: $title-font-size;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .body-text {
@@ -187,7 +188,7 @@ TYPEWRITER
 
 .item-title {
     font-size: $smaller-title-font-size;
-    font-family: 'Montserrat', monospace;
+    font-family: 'Roboto', monospace;
     text-transform: uppercase;
     line-height: 20%;
     letter-spacing: .2rem;

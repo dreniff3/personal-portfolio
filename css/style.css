@@ -148,14 +148,15 @@ TYPEWRITER
 
 .section-title {
   font-size: 4.5rem;
-  font-weight: 700; }
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .body-text {
   font-size: 2.25rem; }
 
 .item-title {
   font-size: 1.5rem;
-  font-family: 'Montserrat', monospace;
+  font-family: 'Roboto', monospace;
   text-transform: uppercase;
   line-height: 20%;
   letter-spacing: .2rem; }
@@ -166,7 +167,7 @@ TYPEWRITER
   display: grid;
   grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
   grid-template-rows: 7rem 1fr;
-  grid-gap: 3rem; }
+  grid-gap: 5rem; }
   .about h2 {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
@@ -197,8 +198,8 @@ TYPEWRITER
       justify-self: end; }
 
 .dark-mode > main > .about > h2::before {
-  top: 4.25rem;
-  left: 2rem;
+  top: 5.5rem;
+  left: 0;
   width: 100%;
   height: 2rem;
   background: #DA0037; }
@@ -412,8 +413,8 @@ TYPEWRITER
   height: 8rem; }
 
 .dark-mode > main > .skills > h2::before {
-  top: 4.25rem;
-  left: 2rem;
+  top: 5.5rem;
+  left: 0;
   width: 100%;
   height: 2rem;
   background: #DA0037; }
@@ -421,4 +422,4 @@ TYPEWRITER
 .dark-mode > main > .skills > .skills__container > .skills__row-1 > .skills__item,
 .dark-mode > main > .skills > .skills__container > .skills__row-2 > .skills__item,
 .dark-mode > main > .skills > .skills__container > .skills__row-3 > .skills__item {
-  background: linear-gradient(black, black) padding-box, linear-gradient(to bottom right, #30475E, #DA0037) border-box; }
+  background: linear-gradient(black, black) padding-box, linear-gradient(to bottom right, #DA0037, #30475E) border-box; }

@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
     grid-template-rows: 7rem 1fr;
-    grid-gap: 3rem;
+    grid-gap: 5rem;
 
     h2 {
         grid-row: 1 / 2;
@@ -49,8 +49,10 @@
 }
 
 .dark-mode > main > .about > h2::before {
-    top: 4.25rem;
-    left: 2rem;
+    // top: 4.25rem;
+    top: 5.5rem;
+    // left: 2rem;
+    left: 0;
     width: 100%;
     height: 2rem;
     background: $color-secondary;

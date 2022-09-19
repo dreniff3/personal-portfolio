@@ -153,8 +153,10 @@
 }
 
 .dark-mode > main > .skills > h2::before {
-    top: 4.25rem;
-    left: 2rem;
+    // top: 4.25rem;
+    top: 5.5rem;
+    // left: 2rem;
+    left: 0;
     width: 100%;
     height: 2rem;
     background: $color-secondary;
@@ -166,5 +168,5 @@
 .dark-mode > main > .skills > .skills__container > .skills__row-3 > .skills__item {
     background: 
         linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-        linear-gradient(to bottom right, $color-tertiary, $color-secondary) border-box;
+        linear-gradient(to bottom right, $color-secondary, $color-tertiary) border-box;
 }
