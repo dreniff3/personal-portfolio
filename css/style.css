@@ -130,7 +130,7 @@ TYPEWRITER
   display: inline-block;
   vertical-align: middle;
   font-size: 6rem;
-  letter-spacing: 2px; }
+  letter-spacing: .5rem; }
 
 .cursor {
   display: inline-block;
@@ -146,9 +146,37 @@ TYPEWRITER
   50% {
     background-color: orangered; } }
 
+.section-title {
+  font-size: 4.5rem;
+  font-weight: 700; }
+
 .about {
   padding-top: 7rem;
-  background-color: #DA0037; }
+  display: grid;
+  grid-template-columns: 3rem .75fr 1fr 3rem;
+  grid-template-rows: 7rem 1fr;
+  grid-gap: 3rem; }
+  .about h2 {
+    grid-row: 1 / 2;
+    grid-column: 2 / span 2;
+    justify-self: center;
+    position: relative; }
+  .about h2::before {
+    content: "";
+    position: absolute;
+    top: 5.5rem;
+    left: 5%;
+    width: 90%;
+    height: .5rem;
+    background: #202020;
+    z-index: -1; }
+
+.dark-mode > main > .about > h2::before {
+  top: 4.25rem;
+  left: 2rem;
+  width: 100%;
+  height: 2rem;
+  background: #DA0037; }
 
 .contact {
   background-color: #202020;
@@ -218,26 +246,12 @@ TYPEWRITER
   display: grid;
   grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem; }
   .home__data {
-    font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
+    font-family: monospace;
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 30rem 1fr 10rem;
     grid-gap: 3rem;
     justify-content: center; }
-  .home__img {
-    grid-column: 3 / 4;
-    display: grid;
-    justify-content: center;
-    align-items: center; }
-    .home__img > img {
-      position: relative;
-      display: block;
-      border-radius: 10%;
-      width: 55rem;
-      height: 55rem;
-      object-fit: cover;
-      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-      animation: open 1s ease-out 1; }
   .home__social {
     display: grid;
     grid-template-columns: 10rem repeat(3, 1fr);
@@ -257,6 +271,20 @@ TYPEWRITER
     .home__social img:hover,
     .home__social img:active {
       opacity: 1; }
+  .home__img {
+    grid-column: 3 / 4;
+    display: grid;
+    justify-content: center;
+    align-items: center; }
+    .home__img > img {
+      position: relative;
+      display: block;
+      border-radius: 10%;
+      width: 55rem;
+      height: 55rem;
+      object-fit: cover;
+      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+      animation: open 1s ease-out 1; }
 
 @keyframes open {
   0% {

@@ -13,9 +13,11 @@ $color-tertiary: #30475E;
 // FONT VARIABLES
 $stylistic-font: 'Pangolin', 'Courier New', monospace;
 $primary-font: 'Poppins', sans-serif;
-$code-font: Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New';
+$code-font: monospace;
+//$code-font: Consolas, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New';
 
 $home-font-size: 6rem;
+$title-font-size: 4.5rem;
 
 *,
 *::before, 

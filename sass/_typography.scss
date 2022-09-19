@@ -153,7 +153,7 @@ TYPEWRITER
     display: inline-block;
     vertical-align: middle;
     font-size: $home-font-size;
-    letter-spacing: 2px;
+    letter-spacing: .5rem;
 }
 
 .cursor {
@@ -174,4 +174,9 @@ TYPEWRITER
     50% {
         background-color: orangered;
     }
+}
+
+.section-title {
+    font-size: $title-font-size;
+    font-weight: 700;
 }
