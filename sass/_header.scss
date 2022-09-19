@@ -77,11 +77,13 @@
     }
 }
 
+// toggles bg-color of navbar
 .dark-mode > header > .navbar {
     background-color: $color-primary-dark;
     box-sizing: none;
 }
 
+// toggles color of logo and button in navbar
 .dark-mode > header > .navbar > .navbar__logo,
 .dark-mode > header > .navbar > .navbar__btn {
     // invert png so black becomes white, and vice versa

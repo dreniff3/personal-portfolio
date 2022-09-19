@@ -105,11 +105,25 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
         height: 100px;
         width: 160px;
 
+        /*
+        *
+            Gradient Border: 
+
+                'padding-box' and 'border-box' values represent the background-clip values
+
+                first linear gradient is limited to padding-box: it's a fake gradient because
+                    we use the same color twice; its purpose is to mask the second background
+                    gradient with the background color
+
+                second linear gradient sits below the first and applies the desired gradient 
+                    colors to our transparent border
+        *
+        */
         background: 
             linear-gradient($color-primary-light, $color-primary-light) padding-box,
             linear-gradient(to bottom right, $color-tertiary, $color-secondary) border-box;
@@ -126,6 +140,7 @@
     background: $color-secondary;
 }
 
+// toggles bg-color inside skills boxes
 .dark-mode > main > .skills > .skills__container > .skills__row-1 > .skills__item,
 .dark-mode > main > .skills > .skills__container > .skills__row-2 > .skills__item,
 .dark-mode > main > .skills > .skills__container > .skills__row-3 > .skills__item {

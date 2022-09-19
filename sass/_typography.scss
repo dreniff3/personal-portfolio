@@ -184,3 +184,8 @@ TYPEWRITER
 .body-text {
     font-size: $paragraph-font-size;
 }
+
+.item-title {
+    font-size: $smaller-title-font-size;
+    font-family: 'Montserrat', monospace;
+}

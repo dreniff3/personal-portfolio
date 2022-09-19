@@ -153,6 +153,10 @@ TYPEWRITER
 .body-text {
   font-size: 2.25rem; }
 
+.item-title {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', monospace; }
+
 .about {
   padding-top: 7rem;
   margin-bottom: 7rem;
@@ -376,9 +380,23 @@ TYPEWRITER
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 100px;
     width: 160px;
+    /*
+        *
+            Gradient Border: 
+
+                'padding-box' and 'border-box' values represent the background-clip values
+
+                first linear gradient is limited to padding-box: it's a fake gradient because
+                    we use the same color twice; its purpose is to mask the second background
+                    gradient with the background color
+
+                second linear gradient sits below the first and applies the desired gradient 
+                    colors to our transparent border
+        *
+        */
     background: linear-gradient(#EDEDED, #EDEDED) padding-box, linear-gradient(to bottom right, #30475E, #DA0037) border-box;
     border-radius: 10%;
     border: 3.5px solid transparent; }
