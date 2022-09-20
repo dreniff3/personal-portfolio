@@ -116,6 +116,8 @@
         &:active {
             animation: border-light .75s ease;
             animation-iteration-count: infinite;
+
+            transform: scale(1.2);
         }
     }
 }
@@ -196,9 +198,7 @@
 }
 
 // toggles bg-color inside skills boxes
-.dark-mode > main > .skills > .skills__container > .skills__col-1 > .skills__item,
-.dark-mode > main > .skills > .skills__container > .skills__col-2 > .skills__item,
-.dark-mode > main > .skills > .skills__container > .skills__col-3 > .skills__item {
+.dark-mode > main > .skills > .skills__container > .skills__col > .skills__item {
     background: 
         linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
         linear-gradient(to bottom right, $color-tertiary, $color-secondary) border-box;

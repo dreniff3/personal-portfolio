@@ -406,7 +406,8 @@ TYPEWRITER
     border: 3.5px solid transparent; }
     .skills__item:hover, .skills__item:active {
       animation: border-light .75s ease;
-      animation-iteration-count: infinite; }
+      animation-iteration-count: infinite;
+      transform: scale(1.2); }
 
 @keyframes border-light {
   from, to {
@@ -454,15 +455,9 @@ TYPEWRITER
   height: 2rem;
   background: #DA0037; }
 
-.dark-mode > main > .skills > .skills__container > .skills__col-1 > .skills__item,
-.dark-mode > main > .skills > .skills__container > .skills__col-2 > .skills__item,
-.dark-mode > main > .skills > .skills__container > .skills__col-3 > .skills__item {
+.dark-mode > main > .skills > .skills__container > .skills__col > .skills__item {
   background: linear-gradient(black, black) padding-box, linear-gradient(to bottom right, #30475E, #DA0037) border-box; }
-  .dark-mode > main > .skills > .skills__container > .skills__col-1 > .skills__item:hover, .dark-mode > main > .skills > .skills__container > .skills__col-1 > .skills__item:active,
-  .dark-mode > main > .skills > .skills__container > .skills__col-2 > .skills__item:hover,
-  .dark-mode > main > .skills > .skills__container > .skills__col-2 > .skills__item:active,
-  .dark-mode > main > .skills > .skills__container > .skills__col-3 > .skills__item:hover,
-  .dark-mode > main > .skills > .skills__container > .skills__col-3 > .skills__item:active {
+  .dark-mode > main > .skills > .skills__container > .skills__col > .skills__item:hover, .dark-mode > main > .skills > .skills__container > .skills__col > .skills__item:active {
     animation: border-dark 1s ease;
     animation-iteration-count: infinite; }
 
