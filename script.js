@@ -85,3 +85,28 @@ function Delete() {
 setTimeout(() => {
     intervalVal = setInterval(Type, 200);
 }, 1000);
+
+
+/* REVEAL TRY */
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+    let reveals = document.querySelectorAll('.reveal');
+
+    for(let i=0; reveals.length; i++) {
+        // height of window
+        let windowHeight = window.innerHeight;
+
+        // the size and position of element relative to the viewport
+        let revealTop = reveals[i].getBoundingClientRect().top;
+
+        let revealPoint = 150;
+
+        // show element when scrolled to
+        if(revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    }
+}

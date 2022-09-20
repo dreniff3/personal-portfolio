@@ -75,3 +75,17 @@ html {
     background-color: $color-primary-darkest;
     color: $color-primary-light;
 }
+
+/* REVEAL TRY */
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
