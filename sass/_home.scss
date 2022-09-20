@@ -71,16 +71,6 @@
     }
 }
 
-@keyframes open {
-    0% {
-        clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-    }
-    100% {
-        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-
-    }
-}
-
 // toggles color of Github logo
 .dark-mode > main > .home > .home__data > .home__social > a > img {
     -webkit-filter: invert(100%);

@@ -122,65 +122,6 @@
     }
 }
 
-@keyframes border-light {
-    from, to {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to bottom right, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    12% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to bottom, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    25% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to bottom left, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    37% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to left, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    50% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to top left, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    62% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to top, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    75% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to top right, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    87% {
-        background: 
-            linear-gradient($color-primary-light, $color-primary-light) padding-box,
-            linear-gradient(to right, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-}
-
 .skills__item > img {
     padding-bottom: 1.5rem;
     width: auto;
@@ -207,65 +148,6 @@
     &:active {
         animation: border-dark 1s ease;
         animation-iteration-count: infinite;
-    }
-}
-
-@keyframes border-dark {
-    from, to {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to bottom right, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    12% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to bottom, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    25% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to bottom left, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    37% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to left, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    50% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to top left, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    62% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to top, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    75% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to top right, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
-    }
-    87% {
-        background: 
-            linear-gradient($color-primary-darkest, $color-primary-darkest) padding-box,
-            linear-gradient(to right, $color-tertiary, $color-secondary) border-box;
-        border-radius: 10%;
-        border: 3.5px solid transparent;
     }
 }
 
