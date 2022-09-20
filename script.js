@@ -1,11 +1,20 @@
-// Dark-mode button
+/*
+*
+    DARK-MODE BUTTON
+*
+*/
 let darkBtn = document.querySelector('.navbar__btn');
 darkBtn.addEventListener('click', () => {
     let element = document.body;
     element.classList.toggle("dark-mode");
 });
 
-// Navbar link highlighting
+
+/*
+*
+    NAVBAR LINK HIGHLIGHTING
+*
+*/
 let menuLinks = document.querySelectorAll(".navbar__menu-link");
 menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -14,7 +23,12 @@ menuLinks.forEach((link) => {
     })
 })
 
-// Typewriter animation
+
+/*
+*
+    TYPEWRITER ANIMATION
+*
+*/
 let content = [
     "Web Developer",
     "Programmer",
@@ -87,7 +101,11 @@ setTimeout(() => {
 }, 1000);
 
 
-/* REVEAL TRY */
+/*
+*
+    REVEAL ON SCROLL
+*
+*/
 window.addEventListener('scroll', reveal);
 
 function reveal() {
@@ -100,7 +118,7 @@ function reveal() {
         // the size and position of element relative to the viewport
         let revealTop = reveals[i].getBoundingClientRect().top;
 
-        let revealPoint = 150;
+        let revealPoint = 50;
 
         // show element when scrolled to
         if(revealTop < windowHeight - revealPoint) {
