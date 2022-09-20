@@ -379,7 +379,8 @@ TYPEWRITER
     .home__img > img {
       position: relative;
       display: block;
-      border-radius: 10%;
+      border-bottom-left-radius: 50% 20%;
+      border-bottom-right-radius: 50% 20%;
       width: 55rem;
       height: 55rem;
       object-fit: cover;
