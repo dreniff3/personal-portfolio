@@ -61,6 +61,9 @@ html {
 
     display: grid;
     grid-template-rows: repeat(2, 100vh) repeat(2, min-content);
+    
+    // spacing between sections
+    grid-gap: 3rem;
 }
 
 .container > footer {
