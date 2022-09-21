@@ -123,3 +123,27 @@ TYPEWRITER
     line-height: 20%;
     letter-spacing: .2rem;
 }
+
+.project-title {
+    font-size: $medium-title-font-size;
+    font-family: 'Roboto', monospace;
+    text-transform: uppercase;
+    line-height: 20%;
+    letter-spacing: .2rem;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: -.1rem;
+        height: 2px;
+        width: 100%;
+        background: $color-primary-light;
+    }
+}
+
+.project-text {
+
+}
