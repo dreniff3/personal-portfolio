@@ -1,4 +1,9 @@
 .projects {
     padding-top: 7rem;
-    background-color: $color-tertiary;
+    margin-bottom: 7rem;
+
+    display: grid;
+    grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
+    grid-template-rows: 7rem 1fr;
+    grid-gap: 5rem;
 }
