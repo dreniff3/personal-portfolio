@@ -22,6 +22,8 @@
 .project {
     grid-column: 2 / 3;
     background-color: $color-tertiary;
+    background-image: linear-gradient(to bottom right, $color-tertiary-medium, $color-tertiary);
+    background-size: cover;
 
     // display: grid;
     // grid-template-columns: repeat(2, 1fr);
@@ -43,6 +45,8 @@
         width: 100%;
         height: 100%;
         background-color: $color-secondary;
+        background-image: linear-gradient(to bottom right, $color-tertiary, $color-secondary);
+    background-size: cover;
         position: absolute;
         top: 3rem;
         left: 5rem;
@@ -63,6 +67,10 @@
         display: grid;
         grid-template-rows: repeat(3, max-content);
         grid-gap: 1.3rem;
+
+        & > p {
+            padding-top: 1rem;
+        }
     }
 
     &__image {
@@ -86,6 +94,7 @@
 .project:nth-child(2n) {
     flex-direction: row-reverse;
     border-top-right-radius: 2.5% 6%;
+    background-image: linear-gradient(to bottom left, $color-tertiary-medium, $color-tertiary);
 
     // rectangle behind container
     &::before {
@@ -93,6 +102,8 @@
         width: 100%;
         height: 100%;
         background-color: $color-secondary;
+        background-image: linear-gradient(to bottom left, $color-tertiary, $color-secondary);
+        background-size: cover;
         position: absolute;
         top: 3rem;
         left: -5rem;
@@ -110,11 +121,12 @@
     // align-self: start;
 
     position: relative;
+    margin-top: 1.2rem;
         
         &::after {
             content: "";
             position: absolute;
-            top: 3rem;
+            top: 3.6rem;
             left: -.1rem;
             height: 2px;
             width: 100%;
@@ -123,9 +135,10 @@
 
     &__item {
         font-size: $smaller-title-font-size;
-        padding: .2rem;
+        padding: .4rem .8rem;
+        margin-right: .5rem;
         border: $color-primary-light 2px solid;
-        border-radius: 10%;
+        border-radius: 1rem;
         background-color: $color-tertiary-light;
         color: $color-tertiary;
         // border: 2px solid $color-secondary-light;
