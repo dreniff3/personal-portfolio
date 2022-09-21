@@ -154,15 +154,19 @@ TYPEWRITER
   text-transform: uppercase;
   line-height: 20%;
   letter-spacing: .2rem;
+  vertical-align: middle;
   position: relative; }
   .project-title::after {
     content: "";
     position: absolute;
-    top: 1.5rem;
+    top: 2.4rem;
     left: -.1rem;
     height: 2px;
     width: 100%;
     background: #EDEDED; }
+  .project-title img {
+    display: inline-block;
+    height: 2rem; }
 
 .about {
   padding-top: 7rem;
@@ -448,25 +452,55 @@ TYPEWRITER
   background-color: #30475E;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
+  .project::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #DA0037;
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    z-index: -1; }
   .project__data {
     align-self: start;
     padding: 3rem;
+    padding-top: 1.8rem;
     display: grid;
     grid-template-rows: repeat(3, max-content);
-    grid-gap: 2rem; }
-  .project__stack {
-    display: flex;
-    justify-content: space-evenly; }
+    grid-gap: 1.3rem; }
   .project__image {
-    justify-self: end; }
+    justify-self: end;
+    margin-bottom: -.4rem; }
     .project__image > img {
       height: 100%;
       width: 40rem;
-      object-fit: cover; }
+      object-fit: cover;
+      transition: all .3s ease; }
+      .project__image > img:hover {
+        transform: scale(1.2); }
 
 .project:nth-child(2n) {
   flex-direction: row-reverse; }
+
+.project-stack {
+  position: relative; }
+  .project-stack::after {
+    content: "";
+    position: absolute;
+    top: 3rem;
+    left: -.1rem;
+    height: 2.8px;
+    width: 100%;
+    background: #EDEDED; }
+  .project-stack__item {
+    font-size: 1.5rem;
+    padding: .2rem;
+    border: #EDEDED 2px solid;
+    border-radius: 10%;
+    background-color: #83aabe;
+    color: #30475E; }
 
 .skills {
   padding-top: 7rem;

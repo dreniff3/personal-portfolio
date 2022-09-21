@@ -130,17 +130,24 @@ TYPEWRITER
     text-transform: uppercase;
     line-height: 20%;
     letter-spacing: .2rem;
+    vertical-align: middle;
 
     position: relative;
 
     &::after {
         content: "";
         position: absolute;
-        top: 1.5rem;
+        top: 2.4rem;
         left: -.1rem;
         height: 2px;
         width: 100%;
         background: $color-primary-light;
+    }
+
+    img {
+        display: inline-block;
+        height: 2rem;
+        // align-self: center;
     }
 }
 
