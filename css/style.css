@@ -186,8 +186,8 @@ TYPEWRITER
     align-items: center; }
     .about__container img {
       border-radius: 10%;
-      width: 45rem;
-      height: 55rem;
+      height: 50rem;
+      width: 40rem;
       object-fit: cover;
       grid-column: 1 / 2;
       justify-self: end; }
@@ -391,7 +391,7 @@ TYPEWRITER
     font-family: monospace;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 30rem 1fr 10rem;
+    grid-template-rows: .4fr .5fr min-content;
     grid-gap: 3rem;
     justify-content: center; }
   .home__social {

@@ -11,7 +11,8 @@
         grid-column: 2 / 3;
 
         display: grid;
-        grid-template-rows: 30rem 1fr 10rem;
+        // grid-template-rows: 30rem 1fr 11rem;
+        grid-template-rows: .4fr .5fr min-content;
         grid-gap: 3rem;
 
         justify-content: center;
