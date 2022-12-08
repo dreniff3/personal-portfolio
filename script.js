@@ -3,10 +3,19 @@
     DARK-MODE BUTTON
 *
 */
-let darkBtn = document.querySelector('.navbar__btn');
-darkBtn.addEventListener('click', () => {
+const toggleBtn = document.querySelector('.navbar__btn');
+let darkBtn = document.querySelector('#dark-btn');
+let lightBtn = document.querySelector('#light-btn');
+toggleBtn.addEventListener('click', () => {
     let element = document.body;
     element.classList.toggle("dark-mode");
+    if (element.classList.contains("dark-mode")) {
+        darkBtn.style.display = 'none';
+        lightBtn.style.display = 'block';
+    } else {
+        darkBtn.style.display = 'block';
+        lightBtn.style.display = 'none';
+    }
 });
 
 
