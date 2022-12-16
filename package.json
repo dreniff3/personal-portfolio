@@ -1,0 +1,22 @@
+{
+  "name": "dreniff3.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreniff3/dreniff3.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreniff3/dreniff3.github.io/issues"
+  },
+  "homepage": "https://github.com/dreniff3/dreniff3.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
