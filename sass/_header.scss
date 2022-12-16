@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: min-content;
+    height: 7.5rem;
     width: 100%;
     background-color: $color-primary-light;
 
@@ -141,7 +141,7 @@
 
     &__icon {
         position: relative;
-        margin-top: 3.5rem;
+        margin-top: 6rem;
         margin-left: 3.5rem;
 
         &,

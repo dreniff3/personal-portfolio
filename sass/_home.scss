@@ -1,27 +1,47 @@
 .home {
-    margin-top: -7rem;
+    margin-top: -5rem;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-template-areas: 'img' 'data';
+    // grid-gap: 3rem;
 
-    display: grid;
-    grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem;
+    &__img {
+        // position: absolute;
+        // object-fit: cover;
+        margin-top: 7rem;
+        padding-top: 3rem;
+        width: 45%;
+        // grid-area: img;
+        // z-index: 10;
 
-    &__data {
-
-        font-family: $code-font;
-
-        grid-column: 2 / 3;
-
-        display: grid;
-        // grid-template-rows: 30rem 1fr 11rem;
-        grid-template-rows: .4fr .5fr min-content;
-        grid-gap: 3rem;
-
-        justify-content: center;
-
+        & > img {
+            // position: relative;
+            width: 100%;
+            height: 75rem;
+            object-fit: cover;
+            margin-bottom: -0.5rem;
+        }
     }
 
-    &__social {
+    &__data {
+        // grid-area: data;
+        // grid-column: 2 / 3;
+
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        
+    }
+
+    &__data > &__social {
+        // align-self: flex-end;
         display: grid;
-        grid-template-columns: 10rem repeat(3, 1fr);
+        grid-template-columns: 3.5rem repeat(2, min-content) 1fr;
         grid-gap: 5rem;
 
         img {
@@ -36,9 +56,9 @@
             width: 3.5rem;
             height: 3.5rem;
             opacity: .7;
-
+            
             grid-column: 3 / 4;
-
+            
             -webkit-filter: invert(100%);
             filter: invert(100%);
         }
@@ -46,30 +66,6 @@
         img:hover,
         img:active {
             opacity: 1;
-        }
-    }
-
-    &__img {
-
-        grid-column: 3 / 4;
-
-        display: grid;
-        justify-content: center;
-        align-items: center;
-
-        & > img {
-            position: relative;
-            display: block;
-            // border-radius: 10%;
-            border-bottom-left-radius: 50% 20%;
-            border-bottom-right-radius: 50% 20%;
-            width: 55rem;
-            height: 55rem;
-            object-fit: cover;
-
-            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-
-            animation: open 1s ease-out 1;
         }
     }
 }
@@ -85,3 +81,91 @@
     -webkit-filter: invert(0%);
     filter: invert(0%);
 }
+
+// .home {
+//     margin-top: -7rem;
+
+//     display: grid;
+//     grid-template-columns: 3rem [main-start] repeat(2, 1fr) [main-end] 3rem;
+
+//     &__data {
+
+//         font-family: $code-font;
+
+//         grid-column: 2 / 3;
+
+//         display: grid;
+//         // grid-template-rows: 30rem 1fr 11rem;
+//         grid-template-rows: .4fr .5fr min-content;
+//         grid-gap: 3rem;
+
+//         justify-content: center;
+
+//     }
+
+//     &__social {
+//         display: grid;
+//         grid-template-columns: 10rem repeat(3, 1fr);
+//         grid-gap: 5rem;
+
+//         img {
+//             width: 8rem;
+//             height: 3.5rem;
+//             opacity: .7;
+
+//             grid-column: 2 / 3;
+//         }
+
+//         img.linkedin-logo {
+//             width: 3.5rem;
+//             height: 3.5rem;
+//             opacity: .7;
+
+//             grid-column: 3 / 4;
+
+//             -webkit-filter: invert(100%);
+//             filter: invert(100%);
+//         }
+
+//         img:hover,
+//         img:active {
+//             opacity: 1;
+//         }
+//     }
+
+//     &__img {
+
+//         grid-column: 3 / 4;
+
+//         display: grid;
+//         justify-content: center;
+//         align-items: center;
+
+//         & > img {
+//             position: relative;
+//             display: block;
+//             // border-radius: 10%;
+//             border-bottom-left-radius: 50% 20%;
+//             border-bottom-right-radius: 50% 20%;
+//             width: 55rem;
+//             height: 55rem;
+//             object-fit: cover;
+
+//             clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+
+//             animation: open 1s ease-out 1;
+//         }
+//     }
+// }
+
+// // toggles color of Github logo
+// .dark-mode > main > .home > .home__data > .home__social > a > img {
+//     -webkit-filter: invert(100%);
+//     filter: invert(100%);
+// }
+
+// // toggles color of LinkedIn logo
+// .dark-mode > main > .home > .home__data > .home__social > a > img.linkedin-logo {
+//     -webkit-filter: invert(0%);
+//     filter: invert(0%);
+// }

@@ -6,15 +6,25 @@
 const toggleBtn = document.querySelector('.toggle-btn');
 let darkBtn = document.querySelector('#dark-btn');
 let lightBtn = document.querySelector('#light-btn');
+
+let darkImg = document.querySelector('#dark-image');
+let lightImg = document.querySelector('#light-image');
+
 toggleBtn.addEventListener('click', () => {
     let element = document.body;
     element.classList.toggle("dark-mode");
     if (element.classList.contains("dark-mode")) {
         darkBtn.style.display = 'none';
         lightBtn.style.display = 'block';
+
+        darkImg.style.display = 'block';
+        lightImg.style.display = 'none';
     } else {
         darkBtn.style.display = 'block';
         lightBtn.style.display = 'none';
+
+        darkImg.style.display = 'none';
+        lightImg.style.display = 'block';
     }
 });
 
