@@ -1,17 +1,23 @@
-.navbar {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: min-content;
+    width: 100%;
     background-color: $color-primary-light;
-    box-shadow: 0 .5rem 2rem rgba(0,0,0, .1);
-    padding: 1rem 1.5rem;
 
-    display: grid;
-    grid-template-columns: min-content repeat(2, minmax(min-content, 1fr));
-    grid-gap: 2rem;
+    transition: background-color .4s ease-out;
 
     &__logo {
-        width: 4.5rem;
+        align-content: center;
     }
 
-    &__btn {
+    &__logo > img {
+        margin-top: -1rem;
+        height: 5rem;
+    }
+
+    & > .toggle-btn {
         all: unset;
         cursor: pointer;
         align-self: start;
@@ -20,73 +26,305 @@
         transition: all .4s;
     }
 
-    &__btn > img {
+    & > .toggle-btn > img {
         width: 4.5rem;
+        margin-top: 1.5rem;
+        margin-right: 3.5rem;
     }
 
-    &__btn:active {
+    & > .toggle-btn:active {
         transform: translateY(5px) scale(.6);
     }
 }
 
-.navbar__menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    &-item {
-        margin: 0 1rem;
+.navigation {
+    &__checkbox {
+        display: none;
     }
 
-    &-link:link,
-    &-link:visited {
-        color: inherit; // simplifies dark-mode/light-mode change
-        font-size: 1.4rem;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
+    &__button {
+        background-color: transparent;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        z-index: 2000;
 
-        // necessary for ::before pseudo-element to have absolute positioning
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        z-index: 1000;
+
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    &__nav {
+        height: 50vh;
+        position: fixed;
+        top: 7rem;
+        left: 0;
+        z-index: 1500;
+
+        width: 0;
+        opacity: 0;
+
+        padding: 1rem;
+        align-content: center;
+
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+        text-align: center;
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.25rem;
+        font-weight: 500;
+        font-family: inherit;
+        margin: 1rem;
         position: relative;
     }
 
-    &-link::before {
-        content: ""; // necessary for displaying ::before pseudo-element
+    &__item:not(:last-child)::after {
+        content: "";
         position: absolute;
-        top: 2rem;
-        left: 0;
-        height: 1rem;
-        width: 3px;
-        background-color: $color-secondary;
-        // hide element when not hovered
-        transform: scaleY(0);
-        transition: transform .2s,
-                    width .4s cubic-bezier(1, 0, 0, 1) .2s,
-                    background-color .1s;
+        left    : 30%;
+        bottom  : 0;
+        height  : 2px;
+        width   : 40%;
+        border-bottom: 1px solid $color-primary-dark;
     }
 
-    &-link:hover::before,
-    &-link.active::before {
-        transform: scaleY(1);
-        width: 100%;
+    &__link {
+        padding: 0.5rem 0.8rem;
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-primary-dark;
+            background-image: linear-gradient(
+                120deg,
+                transparent 0%, transparent 50%, $color-primary-dark 50%
+                );
+            background-size: 250%;
+            transition: all 0.4s;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary-light;
+            transform: translateX(1rem);
+        }
     }
 
-    &-link:active::before {
-        background-color: $color-secondary-light;
+    // FUNCTIONALITY
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(20);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: max-content;
+    }
+
+    // ICON 
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+        margin-left: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-primary-dark;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before { top: -0.8rem; }
+
+        &::after { top: 0.8rem; }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        transform: rotate(-135deg);
+        top: 0;
     }
 }
 
 // toggles bg-color of navbar
-.dark-mode > header > .navbar {
-    background-color: $color-primary-dark;
+.dark-mode > .header {
+    background-color: $color-primary-darkest;
     box-sizing: none;
 }
 
 // toggles color of logo and button in navbar
-.dark-mode > header > .navbar > .navbar__logo,
-.dark-mode > header > .navbar > .navbar__btn {
+.dark-mode > .header > .header__logo > img,
+.dark-mode > .header > .toggle-btn > img {
     // invert png so black becomes white, and vice versa
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
+
+.dark-mode > .header > .navigation > .navigation__nav > .navigation__list > .navigation__item {
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left    : 30%;
+        bottom  : 0;
+        height  : 2px;
+        width   : 40%;
+        border-bottom: 1px solid $color-primary-light;
+    }
+}
+
+.dark-mode > .header > .navigation > .navigation__nav > .navigation__list > .navigation__item > .navigation__link {
+    &:link,
+    &:visited {
+        color: $color-primary-light;
+        background-image: linear-gradient(
+            120deg,
+            transparent 0%, transparent 50%, $color-primary-light 50%
+            );
+        background-size: 250%;
+        transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: $color-primary-dark;
+        transform: translateX(1rem);
+    }
+}
+
+
+// .navbar {
+//     background-color: $color-primary-light;
+//     box-shadow: 0 .5rem 2rem rgba(0,0,0, .1);
+//     padding: 1rem 1.5rem;
+
+//     display: grid;
+//     grid-template-columns: min-content repeat(2, minmax(min-content, 1fr));
+//     grid-gap: 2rem;
+
+//     &__logo {
+//         width: 4.5rem;
+//     }
+
+//     &__btn {
+//         all: unset;
+//         cursor: pointer;
+//         align-self: start;
+//         justify-self: start;
+
+//         transition: all .4s;
+//     }
+
+//     &__btn > img {
+//         width: 4.5rem;
+//     }
+
+//     &__btn:active {
+//         transform: translateY(5px) scale(.6);
+//     }
+// }
+
+// .navbar__menu {
+//     list-style: none;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+
+//     &-item {
+//         margin: 0 1rem;
+//     }
+
+//     &-link:link,
+//     &-link:visited {
+//         color: inherit; // simplifies dark-mode/light-mode change
+//         font-size: 1.4rem;
+//         font-weight: 600;
+//         text-decoration: none;
+//         text-transform: uppercase;
+
+//         // necessary for ::before pseudo-element to have absolute positioning
+//         position: relative;
+//     }
+
+//     &-link::before {
+//         content: ""; // necessary for displaying ::before pseudo-element
+//         position: absolute;
+//         top: 2rem;
+//         left: 0;
+//         height: 1rem;
+//         width: 3px;
+//         background-color: $color-secondary;
+//         // hide element when not hovered
+//         transform: scaleY(0);
+//         transition: transform .2s,
+//                     width .4s cubic-bezier(1, 0, 0, 1) .2s,
+//                     background-color .1s;
+//     }
+
+//     &-link:hover::before,
+//     &-link.active::before {
+//         transform: scaleY(1);
+//         width: 100%;
+//     }
+
+//     &-link:active::before {
+//         background-color: $color-secondary-light;
+//     }
+// }
+
+// // toggles bg-color of navbar
+// .dark-mode > header > .navbar {
+//     background-color: $color-primary-dark;
+//     box-sizing: none;
+// }
+
+// // toggles color of logo and button in navbar
+// .dark-mode > header > .navbar > .navbar__logo,
+// .dark-mode > header > .navbar > .navbar__btn {
+//     // invert png so black becomes white, and vice versa
+//     -webkit-filter: invert(100%);
+//     filter: invert(100%);
+// }

@@ -3,7 +3,7 @@
     DARK-MODE BUTTON
 *
 */
-const toggleBtn = document.querySelector('.navbar__btn');
+const toggleBtn = document.querySelector('.toggle-btn');
 let darkBtn = document.querySelector('#dark-btn');
 let lightBtn = document.querySelector('#light-btn');
 toggleBtn.addEventListener('click', () => {
@@ -24,7 +24,7 @@ toggleBtn.addEventListener('click', () => {
     NAVBAR LINK HIGHLIGHTING
 *
 */
-let menuLinks = document.querySelectorAll(".navbar__menu-link");
+let menuLinks = document.querySelectorAll(".navigation__item");
 menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
         menuLinks.forEach((el) => el.classList.remove("active"));
