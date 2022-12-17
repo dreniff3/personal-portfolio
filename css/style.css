@@ -62,8 +62,8 @@ footer {
   .header__logo {
     align-content: center; }
   .header__logo > img {
-    margin-top: -1rem;
-    height: 5rem; }
+    height: 5rem;
+    margin-top: 0.5rem; }
   .header > .toggle-btn {
     all: unset;
     cursor: pointer;
@@ -77,114 +77,94 @@ footer {
   .header > .toggle-btn:active {
     transform: translateY(5px) scale(0.6); }
 
-.navigation__checkbox {
-  display: none; }
-
-.navigation__button {
-  background-color: transparent;
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
-  z-index: 2000;
-  text-align: center;
-  cursor: pointer; }
-
-.navigation__background {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  z-index: 1000;
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-
-.navigation__nav {
-  height: 50vh;
-  position: fixed;
-  top: 7rem;
-  left: 0;
-  z-index: 1500;
-  width: 0;
-  opacity: 0;
-  padding: 1rem;
-  align-content: center;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
-.navigation__list {
-  text-align: center;
-  list-style: none; }
-
-.navigation__item {
-  font-size: 1.25rem;
-  font-weight: 500;
-  font-family: inherit;
-  margin: 1rem;
+.navigation {
   position: relative; }
-
-.navigation__item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: 30%;
-  bottom: 0;
-  height: 2px;
-  width: 40%;
-  border-bottom: 1px solid #202020; }
-
-.navigation__link {
-  padding: 0.5rem 0.8rem; }
-  .navigation__link:link, .navigation__link:visited {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #202020;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #202020 50%);
-    background-size: 250%;
-    transition: all 0.4s; }
-  .navigation__link:hover, .navigation__link:active {
-    background-position: 100%;
-    color: #EDEDED;
-    transform: translateX(1rem); }
-
-.navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(20); }
-
-.navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  width: max-content; }
-
-.navigation__icon {
-  position: relative;
-  margin-top: 6rem;
-  margin-left: 3.5rem; }
-  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-    width: 3rem;
-    height: 2px;
-    background-color: #202020;
-    display: inline-block; }
-  .navigation__icon::before, .navigation__icon::after {
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -2rem;
+    left: 3.5rem;
+    background-color: transparent;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer; }
+  .navigation__nav {
+    height: 50vh;
+    position: fixed;
+    z-index: 1500;
+    background-color: transparent;
+    display: none;
+    padding: 1rem;
+    align-content: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .navigation__list {
+    text-align: center;
+    list-style: none; }
+  .navigation__item {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: inherit;
+    margin: 1rem;
+    position: relative; }
+  .navigation__item:not(:last-child)::after {
     content: "";
     position: absolute;
-    left: 0;
-    transition: all 0.2s; }
-  .navigation__icon::before {
-    top: -0.8rem; }
-  .navigation__icon::after {
-    top: 0.8rem; }
-
-.navigation__button:hover .navigation__icon::before {
-  top: -1rem; }
-
-.navigation__button:hover .navigation__icon::after {
-  top: 1rem; }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon {
-  background-color: transparent; }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
-  transform: rotate(135deg);
-  top: 0; }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
-  transform: rotate(-135deg);
-  top: 0; }
+    left: 30%;
+    bottom: 0;
+    height: 2px;
+    width: 40%;
+    border-bottom: 1px solid #202020; }
+  .navigation__link {
+    padding: 0.5rem 0.8rem; }
+    .navigation__link:link, .navigation__link:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #202020;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #202020 50%);
+      background-size: 250%;
+      transition: all 0.4s; }
+    .navigation__link:hover, .navigation__link:active {
+      background-position: 100%;
+      color: #EDEDED;
+      transform: translateX(1rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(1); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    display: block; }
+  .navigation__icon {
+    position: absolute; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #202020;
+      display: inline-block;
+      transition: all 0.2s; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0; }
+    .navigation__icon::before {
+      top: -0.8rem; }
+    .navigation__icon::after {
+      top: 0.8rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    transform: rotate(135deg);
+    top: 0; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    transform: rotate(-135deg);
+    top: 0; }
 
 .dark-mode > .header {
   background-color: black;
@@ -194,6 +174,12 @@ footer {
 .dark-mode > .header > .toggle-btn > img {
   -webkit-filter: invert(100%);
   filter: invert(100%); }
+
+.dark-mode > .header > .navigation > .navigation__button > .navigation__icon, .dark-mode > .header > .navigation > .navigation__button > .navigation__icon::before, .dark-mode > .header > .navigation > .navigation__button > .navigation__icon::after {
+  background-color: #EDEDED; }
+
+.navigation > .navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
 
 .dark-mode > .header > .navigation > .navigation__nav > .navigation__list > .navigation__item:not(:last-child)::after {
   content: "";
