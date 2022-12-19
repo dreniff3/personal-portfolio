@@ -1,26 +1,22 @@
 .home {
     margin-top: -5rem;
+    margin-right: -10rem;
     height: 80vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-areas: 'img' 'data';
-    // grid-gap: 3rem;
 
-    &__img {
-        // position: absolute;
-        // object-fit: cover;
-        margin-top: 7rem;
+    &__data {
+        margin-top: -18.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__data--img {
+        margin-top: 6.7rem;
         padding-top: 3rem;
-        width: 45%;
-        // grid-area: img;
-        // z-index: 10;
+        width: 100%;
 
         & > img {
-            // position: relative;
             width: 100%;
             height: 75rem;
             object-fit: cover;
@@ -28,18 +24,35 @@
         }
     }
 
-    &__data {
-        // grid-area: data;
-        // grid-column: 2 / 3;
-
-        display: flex;
-        flex-direction: column;
-        align-self: flex-end;
-        
+    &__data > &__data--name {
+        width: 100%;
+        text-align: center;
+        padding-top: 25rem;
     }
 
-    &__data > &__social {
-        // align-self: flex-end;
+    &__data > &__data--name > h1 {
+        width: 200%;
+        font-family: 'Notable', sans-serif;
+        font-size: 8rem;
+        color: $color-primary-dark;
+        padding-bottom: 25rem;
+        margin-left: -25rem;
+        position: relative;
+        letter-spacing: 3.5px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 66rem;
+            height: 2px;
+            background-color: $color-primary-dark;
+            bottom: 22rem;
+        }
+    }
+
+    &__data > &__data--social {
+        margin-top: 15rem;
+        margin-left: 2.5rem;
         display: grid;
         grid-template-columns: 3.5rem repeat(2, min-content) 1fr;
         grid-gap: 5rem;
@@ -71,15 +84,23 @@
 }
 
 // toggles color of Github logo
-.dark-mode > main > .home > .home__data > .home__social > a > img {
+.dark-mode > main > .home > .home__data > .home__data--social > a > img {
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
 
 // toggles color of LinkedIn logo
-.dark-mode > main > .home > .home__data > .home__social > a > img.linkedin-logo {
+.dark-mode > main > .home > .home__data > .home__data--social > a > img.linkedin-logo {
     -webkit-filter: invert(0%);
     filter: invert(0%);
+}
+
+.dark-mode > main > .home > .home__data > .home__data--name > h1 {
+    color: $color-primary-light;
+}
+
+.dark-mode > main > .home > .home__data > .home__data--name > h1::before {
+    background-color: $color-primary-light;
 }
 
 // .home {

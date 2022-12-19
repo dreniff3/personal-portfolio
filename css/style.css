@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redacted+Script&display=swap");
 *,
 *::before,
 *::after {
@@ -10,7 +26,7 @@ html {
   font-size: 62.5%; }
 
 .container {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Marcellus SC', sans-serif;
   background-color: #EDEDED;
   color: black;
   width: 100%;
@@ -39,8 +55,8 @@ html {
     font-family: inherit; }
 
 footer {
-  padding-top: 6.2rem;
-  padding-left: 37.5%; }
+  padding-top: 23rem;
+  padding-left: 41.5%; }
 
 .container.dark-mode {
   background-color: black;
@@ -112,7 +128,8 @@ footer {
     font-weight: 500;
     font-family: inherit;
     margin: 1rem;
-    position: relative; }
+    position: relative;
+    letter-spacing: 2px; }
   .navigation__item:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -203,48 +220,75 @@ footer {
 
 .home {
   margin-top: -5rem;
+  margin-right: -10rem;
   height: 80vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .home__img {
-    margin-top: 7rem;
+  width: 100%; }
+  .home__data {
+    margin-top: -18.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .home__data--img {
+    margin-top: 6.7rem;
     padding-top: 3rem;
-    width: 45%; }
-    .home__img > img {
+    width: 100%; }
+    .home__data--img > img {
       width: 100%;
       height: 75rem;
       object-fit: cover;
       margin-bottom: -0.5rem; }
-  .home__data {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end; }
-  .home__data > .home__social {
+  .home__data > .home__data--name {
+    width: 100%;
+    text-align: center;
+    padding-top: 25rem; }
+  .home__data > .home__data--name > h1 {
+    width: 200%;
+    font-family: 'Notable', sans-serif;
+    font-size: 8rem;
+    color: #202020;
+    padding-bottom: 25rem;
+    margin-left: -25rem;
+    position: relative;
+    letter-spacing: 3.5px; }
+    .home__data > .home__data--name > h1::before {
+      content: "";
+      position: absolute;
+      width: 66rem;
+      height: 2px;
+      background-color: #202020;
+      bottom: 22rem; }
+  .home__data > .home__data--social {
+    margin-top: 15rem;
+    margin-left: 2.5rem;
     display: grid;
     grid-template-columns: 3.5rem repeat(2, min-content) 1fr;
     grid-gap: 5rem; }
-    .home__data > .home__social img {
+    .home__data > .home__data--social img {
       width: 8rem;
       height: 3.5rem;
       opacity: .7;
       grid-column: 2 / 3; }
-    .home__data > .home__social img.linkedin-logo {
+    .home__data > .home__data--social img.linkedin-logo {
       width: 3.5rem;
       height: 3.5rem;
       opacity: .7;
       grid-column: 3 / 4;
       -webkit-filter: invert(100%);
       filter: invert(100%); }
-    .home__data > .home__social img:hover,
-    .home__data > .home__social img:active {
+    .home__data > .home__data--social img:hover,
+    .home__data > .home__data--social img:active {
       opacity: 1; }
 
-.dark-mode > main > .home > .home__data > .home__social > a > img {
+.dark-mode > main > .home > .home__data > .home__data--social > a > img {
   -webkit-filter: invert(100%);
   filter: invert(100%); }
 
-.dark-mode > main > .home > .home__data > .home__social > a > img.linkedin-logo {
+.dark-mode > main > .home > .home__data > .home__data--social > a > img.linkedin-logo {
   -webkit-filter: invert(0%);
   filter: invert(0%); }
+
+.dark-mode > main > .home > .home__data > .home__data--name > h1 {
+  color: #EDEDED; }
+
+.dark-mode > main > .home > .home__data > .home__data--name > h1::before {
+  background-color: #EDEDED; }
