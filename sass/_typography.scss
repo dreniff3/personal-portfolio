@@ -1,157 +1,174 @@
-/*
-*
-GLITCH TEXT
-*
-*/
-.glitch {
-    font-size: $home-font-size;
-    font-weight: bold;
-    text-transform: uppercase;
-    align-self: end;
-    // so span element can be position: absolute
-    position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redacted+Script&display=swap');
 
-    /* glitch effect */
-    text-shadow: 
-        /* we use ems so the effect scales if we change font-size */
-        .05em 0 0 rgba(255,0,0,.75),
-        -.025em -.05em 0 rgba(0,255,0,.75),
-        .025em .05em 0 rgba(0,0,255,.75);
+// /*
+// *
+// GLITCH TEXT
+// *
+// */
+// .glitch {
+//     font-size: $home-font-size;
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     align-self: end;
+//     // so span element can be position: absolute
+//     position: relative;
 
-    animation: glitch 1000ms infinite;
-}
+//     /* glitch effect */
+//     text-shadow: 
+//         /* we use ems so the effect scales if we change font-size */
+//         .05em 0 0 rgba(255,0,0,.75),
+//         -.025em -.05em 0 rgba(0,255,0,.75),
+//         .025em .05em 0 rgba(0,0,255,.75);
 
-/* hide span behind glitch text */
-.glitch span {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+//     animation: glitch 1000ms infinite;
+// }
 
-.glitch span:first-child {
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-    transform: translate(-.025em, -.0125em);
-    opacity: .8;
+// /* hide span behind glitch text */
+// .glitch span {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
 
-    // animated at a different speed
-    animation: glitch 800ms infinite, glitch-span-1 800ms infinite;
-}
+// .glitch span:first-child {
+//     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+//     transform: translate(-.025em, -.0125em);
+//     opacity: .8;
 
-.glitch span:last-child {
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
-    transform: translate(.05em, .025em);
-    opacity: .8;
+//     // animated at a different speed
+//     animation: glitch 800ms infinite, glitch-span-1 800ms infinite;
+// }
 
-    animation: glitch 1200ms infinite, glitch-span-2 1000ms infinite;
-}
+// .glitch span:last-child {
+//     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+//     transform: translate(.05em, .025em);
+//     opacity: .8;
+
+//     animation: glitch 1200ms infinite, glitch-span-2 1000ms infinite;
+// }
 
 
-/*
-*
-TYPEWRITER
-*
-*/
-.typewriter {
-    // overflow: hidden;
-    align-self: start;
-}
+// /*
+// *
+// TYPEWRITER
+// *
+// */
+// .typewriter {
+//     // overflow: hidden;
+//     align-self: start;
+// }
 
-.text {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: $home-font-size;
-    letter-spacing: .5rem;
-}
+// .text {
+//     display: inline-block;
+//     vertical-align: middle;
+//     font-size: $home-font-size;
+//     letter-spacing: .5rem;
+// }
 
-.cursor {
-    display: inline-block;
-    vertical-align: middle;
-    width: 3px;
-    height: $home-font-size;
-    background-color: orangered;
+// .cursor {
+//     display: inline-block;
+//     vertical-align: middle;
+//     width: 3px;
+//     height: $home-font-size;
+//     background-color: orangered;
 
-    animation: blink .7s step-end infinite;
-}
+//     animation: blink .7s step-end infinite;
+// }
 
-/* Section title */
-.section-title {
-    font-size: $title-font-size;
-    font-weight: 700;
-    text-transform: uppercase;
+// /* Section title */
+// .section-title {
+//     font-size: $title-font-size;
+//     font-weight: 700;
+//     text-transform: uppercase;
 
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
+//     grid-row: 1 / 2;
+//     grid-column: 2 / 3;
 
-    justify-self: center;
+//     justify-self: center;
 
-    position: relative;
+//     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 5.5rem;
-        left: 5%;
-        width: 90%;
-        height: .5rem;
-        background: $color-primary-dark;
-        z-index: -1;
-    }
-}
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 5.5rem;
+//         left: 5%;
+//         width: 90%;
+//         height: .5rem;
+//         background: $color-primary-dark;
+//         z-index: -1;
+//     }
+// }
 
-.dark-mode > main > .about > .section-title::before,
-.dark-mode > main > .skills > .section-title::before,
-.dark-mode > main > .projects > .section-title::before {
-        // top: 4.25rem;
-        top: 5.5rem;
-        // left: 2rem;
-        left: 0;
-        width: 100%;
-        height: 2rem;
-        background: $color-secondary;
-}
+// .dark-mode > main > .about > .section-title::before,
+// .dark-mode > main > .skills > .section-title::before,
+// .dark-mode > main > .projects > .section-title::before {
+//         // top: 4.25rem;
+//         top: 5.5rem;
+//         // left: 2rem;
+//         left: 0;
+//         width: 100%;
+//         height: 2rem;
+//         background: $color-secondary;
+// }
 
-/* Paragraph text */
-.body-text {
-    font-size: $paragraph-font-size;
-}
+// /* Paragraph text */
+// .body-text {
+//     font-size: $paragraph-font-size;
+// }
 
-/* Skills name */
-.item-title {
-    font-size: $smaller-title-font-size;
-    font-family: 'Roboto', monospace;
-    text-transform: uppercase;
-    line-height: 20%;
-    letter-spacing: .2rem;
-}
+// /* Skills name */
+// .item-title {
+//     font-size: $smaller-title-font-size;
+//     font-family: 'Roboto', monospace;
+//     text-transform: uppercase;
+//     line-height: 20%;
+//     letter-spacing: .2rem;
+// }
 
-.project-title {
-    font-size: $medium-title-font-size;
-    font-family: 'Roboto', monospace;
-    text-transform: uppercase;
-    line-height: 20%;
-    letter-spacing: .2rem;
-    vertical-align: middle;
+// .project-title {
+//     font-size: $medium-title-font-size;
+//     font-family: 'Roboto', monospace;
+//     text-transform: uppercase;
+//     line-height: 20%;
+//     letter-spacing: .2rem;
+//     vertical-align: middle;
 
-    position: relative;
+//     position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        // top: 2.4rem;
-        top: 3rem;
-        left: -.1rem;
-        height: 2px;
-        width: 100%;
-        background: $color-primary-light;
-    }
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         // top: 2.4rem;
+//         top: 3rem;
+//         left: -.1rem;
+//         height: 2px;
+//         width: 100%;
+//         background: $color-primary-light;
+//     }
 
-    img {
-        display: inline-block;
-        height: 2rem;
-        // align-self: center;
-    }
-}
+//     img {
+//         display: inline-block;
+//         height: 2rem;
+//         // align-self: center;
+//     }
+// }
 
-.project-text {
-    font-size: $smaller-title-font-size;
-}
+// .project-text {
+//     font-size: $smaller-title-font-size;
+// }
