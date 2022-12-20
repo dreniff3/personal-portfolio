@@ -78,10 +78,28 @@ html {
     }
 }
 
-footer {
+.footer {
     // text-align: center;
     padding-top: 23rem;
     padding-left: 41.5%;
+}
+
+.container > #about__footer {
+    grid-area: footer;
+    
+    background-color: transparent;
+
+    padding-top: 0;
+    padding-left: 50%;
+    margin-top: -10rem;
+    max-height: 5rem;
+        
+    & > p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: inherit;
+        font-family: inherit;
+    }
 }
 
 // toggles bg-color and text-color of entire page
