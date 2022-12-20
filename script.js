@@ -68,82 +68,82 @@ let element = document.querySelector(".text");
 
 let cursor = document.querySelector(".cursor");
 
-// implements typing effect
-function Type() {
-    // display one more character
-    let text = content[phrase].substring(0, phraseIndex + 1);
-    element.textContent = text;
-    phraseIndex++;
+// // implements typing effect
+// function Type() {
+//     // display one more character
+//     let text = content[phrase].substring(0, phraseIndex + 1);
+//     element.textContent = text;
+//     phraseIndex++;
 
-    // if full string is displayed, delete string after a delay
-    if(text === content[phrase]) {
-        // hide cursor
-        cursor.style.display = 'none';
+//     // if full string is displayed, delete string after a delay
+//     if(text === content[phrase]) {
+//         // hide cursor
+//         cursor.style.display = 'none';
 
-        // delete phrase at a different interval speed
-        clearInterval(intervalVal);
-        setTimeout(() => {
-            intervalVal = setInterval(Delete, 50);
-        }, 2000);
-    }
-}
+//         // delete phrase at a different interval speed
+//         clearInterval(intervalVal);
+//         setTimeout(() => {
+//             intervalVal = setInterval(Delete, 50);
+//         }, 2000);
+//     }
+// }
 
-// implements deleting effect
-function Delete() {
-    // delete one more character
-    let text = content[phrase].substring(0, phraseIndex - 1);
-    element.textContent = text;
-    phraseIndex--;
+// // implements deleting effect
+// function Delete() {
+//     // delete one more character
+//     let text = content[phrase].substring(0, phraseIndex - 1);
+//     element.textContent = text;
+//     phraseIndex--;
 
-    // if string is fully deleted, display next string
-    if(text === '') {
-        clearInterval(intervalVal);
+//     // if string is fully deleted, display next string
+//     if(text === '') {
+//         clearInterval(intervalVal);
 
-        // if the string is last in content, next string is the first string
-        if(phrase == (content.length - 1))
-            phrase = 0;
-        else
-            phrase++;
+//         // if the string is last in content, next string is the first string
+//         if(phrase == (content.length - 1))
+//             phrase = 0;
+//         else
+//             phrase++;
 
-        phraseIndex = 0;
+//         phraseIndex = 0;
 
-        setTimeout(() => {
-            cursor.style.display = 'inline-block';
-            intervalVal = setInterval(Type, 200);
-        }, 200);
-    }
-}
+//         setTimeout(() => {
+//             cursor.style.display = 'inline-block';
+//             intervalVal = setInterval(Type, 200);
+//         }, 200);
+//     }
+// }
 
-// start typing effect on load
-setTimeout(() => {
-    intervalVal = setInterval(Type, 200);
-}, 1000);
+// // start typing effect on load
+// setTimeout(() => {
+//     intervalVal = setInterval(Type, 200);
+// }, 1000);
 
 
-/*
-*
-    REVEAL ON SCROLL
-*
-*/
-window.addEventListener('scroll', reveal);
+// /*
+// *
+//     REVEAL ON SCROLL
+// *
+// */
+// window.addEventListener('scroll', reveal);
 
-function reveal() {
-    let reveals = document.querySelectorAll('.reveal');
+// function reveal() {
+//     let reveals = document.querySelectorAll('.reveal');
 
-    for(let i=0; reveals.length; i++) {
-        // height of window
-        let windowHeight = window.innerHeight;
+//     for(let i=0; reveals.length; i++) {
+//         // height of window
+//         let windowHeight = window.innerHeight;
 
-        // the size and position of element relative to the viewport
-        let revealTop = reveals[i].getBoundingClientRect().top;
+//         // the size and position of element relative to the viewport
+//         let revealTop = reveals[i].getBoundingClientRect().top;
 
-        let revealPoint = 50;
+//         let revealPoint = 50;
 
-        // show element when scrolled to
-        if(revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add('active');
-        } else {
-            reveals[i].classList.remove('active');
-        }
-    }
-}
+//         // show element when scrolled to
+//         if(revealTop < windowHeight - revealPoint) {
+//             reveals[i].classList.add('active');
+//         } else {
+//             reveals[i].classList.remove('active');
+//         }
+//     }
+// }
