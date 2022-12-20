@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barrio&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
@@ -67,6 +65,96 @@ footer {
     reveal sections on scroll
 *
 */
+.about {
+  display: grid;
+  grid-template-columns: 50rem 1fr;
+  margin-top: -8rem; }
+  .about__img {
+    width: 100%;
+    padding: 10rem; }
+    .about__img > img {
+      height: 60rem; }
+  .about__form {
+    align-self: center;
+    padding-right: 10rem; }
+  .about__form--info {
+    padding: 2rem;
+    border: solid 3px inherit;
+    border-radius: 12px 0 12px 0;
+    display: flex;
+    flex-direction: column; }
+    .about__form--info > legend {
+      font-family: 'Oi', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.5rem;
+      padding: 0 1rem; }
+    .about__form--info > .sub-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: -1rem;
+      margin-left: -0.5rem;
+      margin-bottom: 1.5rem; }
+      .about__form--info > .sub-wrapper > img {
+        width: 3rem;
+        padding: 0 0.5rem; }
+      .about__form--info > .sub-wrapper > h3 {
+        font-size: 1.5rem; }
+  .about__form--info > .about--wrapper {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem; }
+    .about__form--info > .about--wrapper:not(:last-child) {
+      border-bottom: 2px dotted #202020; }
+    .about__form--info > .about--wrapper:last-child {
+      margin-bottom: -3rem; }
+    .about__form--info > .about--wrapper > label {
+      font-size: 1.5rem; }
+    .about__form--info > .about--wrapper #details, .about__form--info > .about--wrapper #actions, .about__form--info > .about--wrapper #inventory {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      overflow: hidden;
+      resize: none;
+      padding-left: 6.7rem;
+      margin-top: -1.9rem;
+      font-family: 'Permanent Marker', sans-serif;
+      letter-spacing: 1px; }
+    .about__form--info > .about--wrapper #actions,
+    .about__form--info > .about--wrapper #inventory {
+      font-family: 'Redacted Script', sans-serif; }
+    .about__form--info > .about--wrapper #actions {
+      padding-left: 5rem; }
+    .about__form--info > .about--wrapper #inventory {
+      padding-left: 6rem;
+      margin-bottom: -3.5rem; }
+  .about__form--info > .about--wrapper > input {
+    padding-left: 0.8rem; }
+  .about__form--info > .about--wrapper > input,
+  .about__form--info > .about--wrapper > #skills > .skills-wrapper > input {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: 'Permanent Marker', sans-serif;
+    letter-spacing: 1px; }
+  .about__form--info > .about--wrapper > #skills {
+    border: none; }
+    .about__form--info > .about--wrapper > #skills > legend {
+      font-size: 1.5rem; }
+  .about .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1.8rem; }
+    .about .skills-wrapper > input {
+      padding-left: 5.2rem;
+      padding-bottom: 0.5rem; }
+
+.dark-mode > main > .about > .about__form > .about__form--info > .about--wrapper {
+  border-color: #EDEDED; }
+
+.dark-mode > main > .about > .about__form > .about__form--info > .sub-wrapper > img {
+  -webkit-filter: invert(100%);
+  filter: invert(100%); }
+
 .header {
   display: flex;
   align-items: center;

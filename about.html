@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Code icons created by Icongeek26 - Flaticon -->
+    <link rel="shortcut icon" type="image/png" href="img/web-programming.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title>Don Reniff &mdash; Full Stack Web Developer</title>
+</head>
+
+<body class="container dark-mode">
+
+    <!-- NAVBAR -->
+    <header class="header">
+
+        <div class="navigation">
+
+            <input 
+                type="checkbox" 
+                id="nav-toggle" 
+                class="navigation__checkbox"
+            />
+
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+
+            <div class="navigation__background"></div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="about.html" class="navigation__link">About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header__logo">
+            <img src="img/signature.png" alt="My signature">
+        </div>
+
+        <button class="toggle-btn">
+            <!-- Sunglasses icons created by Rohim - Flaticon -->
+            <img src="img/sunglasses.png" alt="Dark mode button" id="dark-btn" style="display: none;">
+            <!-- Reading eyeglasses icon created by Freepik - Flaticon -->
+            <img src="img/reading-eyeglasses.png" alt="Light mode button" id="light-btn">
+        </button>
+
+    </header>
+
+    <main>
+        <div class="about">
+
+            <div class="about__img">
+                <img src="img/about-dark.png" alt="Me" id="dark-image">
+                <img src="img/about-light.png" alt="Me" id="light-image" style="display: none;">
+            </div>
+
+            <form action="#" class="about__form">
+
+                <fieldset class="about__form--info">
+                    <legend>Domains & Developers</legend>
+
+                    <div class="sub-wrapper">
+                        <!-- Reading eyeglasses icon created by Freepik - Flaticon -->
+                        <img src="img/sword.png" alt="sword">
+                        <h3>Character Sheet</h3>
+                        <!-- Reading eyeglasses icon created by Freepik - Flaticon -->
+                        <img src="img/sword.png" alt="sword">
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="number"> No. </label>
+                        <input 
+                            type="number" 
+                            id="number" 
+                            value="255"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="name">Name: </label>
+                        <input 
+                            type="text"
+                            id="name"
+                            value="Don Reniff"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="category">Category: </label>
+                        <input 
+                            type="text"
+                            id="category"
+                            value="Web Developer"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="location">Location: </label>
+                        <input 
+                            type="text"
+                            id="location"
+                            value="Ferndale, WA"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <fieldset id="skills">
+                            <legend>Skills: </legend>
+                            <div class="skills-wrapper">
+                                <input 
+                                    type="text"
+                                    value="HTML &starf;&starf;&starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="CSS/Sass &starf;&starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="JavaScript &starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Node.js &starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="React &starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Git &starf;&starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Python &starf;&starf;&starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Flask &starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Express.js &starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="MongoDB &starf;&starf;&starf;"
+                                    readonly
+                                />
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="details">Details: </label>
+                        <textarea name="details" id="details" cols="20" rows="4" readonly>My name is Don Reniff. I'm currently a student enrolled in Oregon State University's online post-baccalaureate program. I am passionate about learning, and I aspire to become a full-stack Web Developer.</textarea>
+                    </div>
+
+                    <!-- <div class="about--wrapper">
+                        <label for="actions">Actions: </label>
+                        <textarea name="actions" id="actions" cols="20" rows="4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero omnis eveniet sunt alias perferendis minima facere nisi quisquam a illum, tenetur unde vitae dolor optio, repellat explicabo facilis ad ipsum.</textarea>
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="inventory">Inventory: </label>
+                        <textarea name="inventory" id="inventory" cols="20" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis ipsa sit adipisci at, placeat est laborum expedita, illo molestias ipsam sint doloribus ad!</textarea>
+                    </div> -->
+
+                </fieldset>
+
+            </form>
+
+            <!-- <div class="about__info">
+                <div class="about__info--wrapper">
+                    <p>No. 5387</p>
+                    <h1>Don Reniff</h1>
+                    <p><strong>Category: </strong>Web Developer</p>
+                    <p><strong>Location: </strong>Ferndale, WA</p>
+                    <section class="skills">
+                        <p><strong>Skills: </strong></p>
+                        <ul>
+                            <li>HTML <span>&starf;&starf;&starf;&starf;&starf;</span></li>
+                            <li>CSS/Sass <span>&starf;&starf;&starf;&starf;</span></li>
+                            <li>JavaScript <span>&starf;&starf;&starf;</span></li>
+                            <li>Node.js <span>&starf;&starf;&starf;</span></li>
+                            <li>React <span>&starf;&starf;&starf;</span></li>
+                            <li>Git <span>&starf;&starf;&starf;</span></li>
+                            <li>Python <span>&starf;&starf;&starf;&starf;</span></li>
+                            <li>Flask <span>&starf;&starf;&starf;</span></li>
+                            <li>Express.js <span>&starf;&starf;&starf;</span></li>
+                            <li>MongoDB <span>&starf;&starf;&starf;</span></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p><strong>Details:</strong></p>
+                        <p>My name is Don Reniff. I'm currently a student enrolled in Oregon State University's online post-baccalaureate program.
+                            I am passionate about learning, and I aspire to become a full-stack Web Developer.
+                        </p>
+                    </section>
+                    <section>
+                        <p><strong>Actions: </strong></p>
+                        <p class="redacted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis qui ex repellendus atque corrupti illum dolorum vitae, blanditiis ratione, impedit beatae maiores porro vero explicabo repellat, ipsum laudantium rem!</p>
+                    </section>
+                    <section>
+                        <p><strong>Inventory: </strong></p>
+                        <p class="redacted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis tempora soluta, ducimus architecto voluptatum corrupti minima excepturi cumque aliquam possimus cum omnis fugiat culpa. Sapiente, doloribus nesciunt.</p>
+                    </section>
+                </div>
+            </div> -->
+
+        </div>
+    </main>
+
+</body>
+</html>
