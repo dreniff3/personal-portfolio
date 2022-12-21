@@ -41,7 +41,7 @@ html {
     background-color: $color-primary-light;
     color: $color-primary-darkest;
 
-    width: 100%;
+    overflow: hidden;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -79,8 +79,7 @@ html {
 }
 
 .footer {
-    // text-align: center;
-    padding-top: 23rem;
+    padding-top: 24rem;
     padding-left: 41.5%;
 }
 
@@ -89,9 +88,11 @@ html {
     
     background-color: transparent;
 
-    padding-top: 0;
-    padding-left: 50%;
-    margin-top: -10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: -20rem;
     max-height: 5rem;
         
     & > p {

@@ -27,7 +27,7 @@ html {
   font-family: 'Marcellus SC', sans-serif;
   background-color: #EDEDED;
   color: black;
-  width: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -53,15 +53,17 @@ html {
     font-family: inherit; }
 
 .footer {
-  padding-top: 23rem;
+  padding-top: 24rem;
   padding-left: 41.5%; }
 
 .container > #about__footer {
   grid-area: footer;
   background-color: transparent;
-  padding-top: 0;
-  padding-left: 50%;
-  margin-top: -10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: -20rem;
   max-height: 5rem; }
   .container > #about__footer > p {
     font-size: 1.25rem;
@@ -81,15 +83,18 @@ html {
 .about {
   display: grid;
   grid-template-columns: 50rem 1fr;
-  margin-top: -8rem; }
+  height: 80vh;
+  width: 100%; }
   .about__img {
     width: 100%;
-    padding: 10rem; }
+    padding: 10rem;
+    margin-top: -7rem; }
     .about__img > img {
       height: 60rem; }
   .about__form {
     align-self: center;
-    padding-right: 10rem; }
+    padding-right: 10rem;
+    margin-top: -8rem; }
   .about__form--info {
     padding: 2rem;
     border: solid 3px inherit;
@@ -172,12 +177,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 7.5rem;
   width: 100%;
   background-color: #EDEDED;
   transition: background-color .4s ease-out; }
   .header__logo {
-    align-content: center; }
+    margin-left: 8rem; }
   .header__logo > img {
     height: 5rem;
     margin-top: 0.5rem; }
@@ -330,7 +336,7 @@ html {
     align-items: center;
     justify-content: space-between; }
   .home__data--img {
-    margin-top: 6.7rem;
+    margin-top: 8.25rem;
     padding-top: 3rem;
     width: 100%; }
     .home__data--img > img {
