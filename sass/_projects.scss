@@ -1,162 +1,219 @@
 .projects {
-    padding-top: 7rem;
-    margin-bottom: 7rem;
-
     display: grid;
-    grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
-    grid-template-rows: 7rem 1fr;
-    grid-gap: 5rem;
+    grid-template-columns: max-content 1fr;
+    height: 80vh;
+    width: 100%;
+    margin: 0 10rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
 
-    // container for all projects
-    &__container {
-        grid-column: 2 / 3;
+    &__nav {
+        grid-column: 1 / 2;
+        // list-style: none;
+        // border: 2px solid inherit;
 
-        display: grid;
-        grid-template-columns: 10% 1fr 10%;
+        &--list {
+            padding: 1rem 2rem;
+            list-style: none;
+            border-left: 2px solid $color-primary-dark;
 
-        grid-row-gap: 7rem;
-    }
-}
-
-// container for each individual project
-.project {
-    grid-column: 2 / 3;
-    background-color: $color-tertiary;
-    background-image: linear-gradient(to bottom right, $color-tertiary-medium, $color-tertiary);
-    background-size: cover;
-
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-gap: 2rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    // overflow: hidden;
-
-    border-top-left-radius: 2.5% 6%;
-
-    position: relative;
-
-    // rectangle behind container
-    &::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: $color-secondary;
-        background-image: linear-gradient(to bottom right, $color-tertiary, $color-secondary);
-    background-size: cover;
-        position: absolute;
-        top: 3rem;
-        left: 5rem;
-        z-index: -1;
-
-        border-bottom-right-radius: 2.5% 6%;
-    }
-
-    &__data {
-        align-self: start;
-        padding: 3rem;
-        padding-top: 1.8rem;
-
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-
-        display: grid;
-        grid-template-rows: repeat(3, max-content);
-        grid-gap: 1.3rem;
-
-        & > p {
-            padding-top: 1rem;
+            font-size: 1.8rem;
+            padding: 2rem 5rem 2rem 3rem;
         }
-    }
 
-    &__image {
-        justify-self: end;
-        margin-bottom: -.4rem; // fixes small padding at bottom of image
+        &--item {
+            & > a {
+                padding: 0.5rem 0.8rem;
+            }
 
-        & > img {
-            height: 100%;
-            width: 40rem;
-            object-fit: cover;
-
-            transition: all .3s ease;
-
-            &:hover {
-                transform: scale(1.15);
+            & > a:link,
+            & > a:visited {
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-primary-dark;
+                background-image: linear-gradient(
+                    90deg,
+                    transparent 0%, transparent 50%, $color-primary-dark 50%, $color-primary-dark 100%
+                    );
+                background-size: 300%;
+                transition: all 0.5s;
+            }
+    
+            & > a:hover,
+            & > a:active,
+            & > a:target {
+                background-position: -50% 100%;
+                color: $color-primary-light;
+                transform: translateX(1rem);
             }
         }
-    }
-}
 
-.project:nth-child(2n) {
-    flex-direction: row-reverse;
-    border-top-right-radius: 2.5% 6%;
-    background-image: linear-gradient(to bottom left, $color-tertiary-medium, $color-tertiary);
-
-    // rectangle behind container
-    &::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: $color-secondary;
-        background-image: linear-gradient(to bottom left, $color-tertiary, $color-secondary);
-        background-size: cover;
-        position: absolute;
-        top: 3rem;
-        left: -5rem;
-        z-index: -1;
-
-        border-bottom-left-radius: 2.5% 6%;
-        border-bottom-right-radius: 0% 0%;
-    }
-}
-
-
-.project-stack {
-    // display: flex;
-    // justify-content: space-evenly;
-    // align-self: start;
-
-    position: relative;
-    margin-top: 1.2rem;
-        
-        &::after {
-            content: "";
-            position: absolute;
-            top: 3.6rem;
-            left: -.1rem;
-            height: 2px;
-            width: 100%;
-            background: $color-primary-light;
+        &--item:not(:last-child) {
+            margin-bottom: 1rem;
         }
+    }
 
-    &__item {
-        font-size: $smaller-title-font-size;
-        padding: .4rem .8rem;
-        margin-right: .5rem;
-        border: $color-primary-light 2px solid;
-        border-radius: 1rem;
-        background-color: $color-tertiary-light;
-        color: $color-tertiary;
-        // border: 2px solid $color-secondary-light;
-        // border-radius: 10%;
-        // color: $color-secondary;
-
-        // transition: all .3s ease;
-
-        // background: 
-        //     linear-gradient($color-primary-light, $color-primary-light) padding-box,
-        //     linear-gradient(to bottom right, $color-tertiary, $color-secondary) border-box;
-        // border-radius: 10%;
-        // border: 2px solid transparent;
-
-        // &:hover,
-        // &:active {
-        //     animation: border-light .75s ease;
-        //     animation-iteration-count: infinite;
-        // }
+    &__container {
+        grid-column: 2 / 3;
     }
 }
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list {
+    border-color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a { 
+    color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:link,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:visited {
+    color: $color-primary-light;
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%, transparent 50%, $color-primary-light 50%, $color-primary-light 100%
+    );
+}
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:hover,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:active,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:target {
+    color: $color-primary-dark;
+}
+
+// .projects {
+//     padding-top: 7rem;
+//     margin-bottom: 7rem;
+
+//     display: grid;
+//     grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
+//     grid-template-rows: 7rem 1fr;
+//     grid-gap: 5rem;
+
+//     // container for all projects
+//     &__container {
+//         grid-column: 2 / 3;
+
+//         display: grid;
+//         grid-template-columns: 10% 1fr 10%;
+
+//         grid-row-gap: 7rem;
+//     }
+// }
+
+// // container for each individual project
+// .project {
+//     grid-column: 2 / 3;
+//     background-color: $color-tertiary;
+//     background-image: linear-gradient(to bottom right, $color-tertiary-medium, $color-tertiary);
+//     background-size: cover;
+
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     border-top-left-radius: 2.5% 6%;
+
+//     position: relative;
+
+//     // rectangle behind container
+//     &::before {
+//         content: "";
+//         width: 100%;
+//         height: 100%;
+//         background-color: $color-secondary;
+//         background-image: linear-gradient(to bottom right, $color-tertiary, $color-secondary);
+//     background-size: cover;
+//         position: absolute;
+//         top: 3rem;
+//         left: 5rem;
+//         z-index: -1;
+
+//         border-bottom-right-radius: 2.5% 6%;
+//     }
+
+//     &__data {
+//         align-self: start;
+//         padding: 3rem;
+//         padding-top: 1.8rem;
+
+//         // display: flex;
+//         // flex-direction: column;
+//         // justify-content: space-between;
+
+//         display: grid;
+//         grid-template-rows: repeat(3, max-content);
+//         grid-gap: 1.3rem;
+
+//         & > p {
+//             padding-top: 1rem;
+//         }
+//     }
+
+//     &__image {
+//         justify-self: end;
+//         margin-bottom: -.4rem; // fixes small padding at bottom of image
+
+//         & > img {
+//             height: 100%;
+//             width: 40rem;
+//             object-fit: cover;
+
+//             transition: all .3s ease;
+
+//             &:hover {
+//                 transform: scale(1.15);
+//             }
+//         }
+//     }
+// }
+
+// .project:nth-child(2n) {
+//     flex-direction: row-reverse;
+//     border-top-right-radius: 2.5% 6%;
+//     background-image: linear-gradient(to bottom left, $color-tertiary-medium, $color-tertiary);
+
+//     // rectangle behind container
+//     &::before {
+//         content: "";
+//         width: 100%;
+//         height: 100%;
+//         background-color: $color-secondary;
+//         background-image: linear-gradient(to bottom left, $color-tertiary, $color-secondary);
+//         background-size: cover;
+//         position: absolute;
+//         top: 3rem;
+//         left: -5rem;
+//         z-index: -1;
+
+//         border-bottom-left-radius: 2.5% 6%;
+//         border-bottom-right-radius: 0% 0%;
+//     }
+// }
+
+
+// .project-stack {
+//     position: relative;
+//     margin-top: 1.2rem;
+        
+//         &::after {
+//             content: "";
+//             position: absolute;
+//             top: 3.6rem;
+//             left: -.1rem;
+//             height: 2px;
+//             width: 100%;
+//             background: $color-primary-light;
+//         }
+
+//     &__item {
+//         font-size: $smaller-title-font-size;
+//         padding: .4rem .8rem;
+//         margin-right: .5rem;
+//         border: $color-primary-light 2px solid;
+//         border-radius: 1rem;
+//         background-color: $color-tertiary-light;
+//         color: $color-tertiary;
+//     }
+// }

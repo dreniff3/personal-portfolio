@@ -399,3 +399,57 @@ html {
 
 .dark-mode > main > .home > .home__data > .home__data--name > h1::before {
   background-color: #EDEDED; }
+
+.projects {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  height: 80vh;
+  width: 100%;
+  margin: 0 10rem;
+  padding-top: 5rem;
+  padding-left: 5rem; }
+  .projects__nav {
+    grid-column: 1 / 2; }
+    .projects__nav--list {
+      padding: 1rem 2rem;
+      list-style: none;
+      border-left: 2px solid #202020;
+      font-size: 1.8rem;
+      padding: 2rem 5rem 2rem 3rem; }
+    .projects__nav--item > a {
+      padding: 0.5rem 0.8rem; }
+    .projects__nav--item > a:link,
+    .projects__nav--item > a:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #202020;
+      background-image: linear-gradient(90deg, transparent 0%, transparent 50%, #202020 50%, #202020 100%);
+      background-size: 300%;
+      transition: all 0.5s; }
+    .projects__nav--item > a:hover,
+    .projects__nav--item > a:active,
+    .projects__nav--item > a:target {
+      background-position: -50% 100%;
+      color: #EDEDED;
+      transform: translateX(1rem); }
+    .projects__nav--item:not(:last-child) {
+      margin-bottom: 1rem; }
+  .projects__container {
+    grid-column: 2 / 3; }
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list {
+  border-color: #EDEDED; }
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a {
+  color: #EDEDED; }
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:link,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:visited {
+  color: #EDEDED;
+  background-image: linear-gradient(90deg, transparent 0%, transparent 50%, #EDEDED 50%, #EDEDED 100%); }
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:hover,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:active,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:target {
+  color: #202020; }
