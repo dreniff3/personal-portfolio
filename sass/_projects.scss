@@ -1,19 +1,23 @@
 .projects {
     display: grid;
     grid-template-columns: max-content 1fr;
+    grid-gap: 3rem;
     height: 80vh;
     width: 100%;
     margin: 0 10rem;
     padding-top: 5rem;
     padding-left: 5rem;
 
+    font-family: 'Special Elite', 'IM Fell English', sans-serif;
+    letter-spacing: 2px;
+
     &__nav {
         grid-column: 1 / 2;
-        // list-style: none;
-        // border: 2px solid inherit;
+        margin-top: 10rem;
+        margin-left: 10rem;
+
 
         &--list {
-            padding: 1rem 2rem;
             list-style: none;
             border-left: 2px solid $color-primary-dark;
 
@@ -42,7 +46,8 @@
     
             & > a:hover,
             & > a:active,
-            & > a:target {
+            & > a:target,
+            & > a:focus {
                 background-position: -50% 100%;
                 color: $color-primary-light;
                 transform: translateX(1rem);
@@ -56,6 +61,56 @@
 
     &__container {
         grid-column: 2 / 3;
+
+        border: 3px solid $color-primary-dark;
+        border-radius: 12px;
+        margin-left: 18rem;
+        padding: 3rem;
+        width: 60rem;
+        height: 50rem;
+    }
+
+    &__container > .project > .project__image {
+        width: 100%;
+        text-align: center;
+
+        & > img {
+            height: 25rem;
+            padding: 1rem 2rem;
+            border: 5px solid $color-primary-dark;
+            border-style: double;
+            border-radius: 12px;
+        }
+    }
+
+    &__container > .project > .project__data > .project--title {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 1.2rem 0;
+    }
+
+    &__container > .project > .project__data > .project--title > a > img {
+        vertical-align: middle;
+        padding-bottom: 0.6rem;
+        width: 2.4rem;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+
+    &__container > .project > .project__data > .project--stack {
+        font-size: 1.4rem;
+        // text-align: center;
+
+        display: flex;
+        justify-content: space-around;
+
+        margin-bottom: 1.8rem;
+    }
+
+    &__container > .project > .project__data > p {
+        font-size: 1.4rem;
+        text-align: justify;
+        line-height: 1.5;
     }
 }
 
@@ -78,8 +133,22 @@
 
 .dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:hover,
 .dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:active,
-.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:target {
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:target,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:focus {
     color: $color-primary-dark;
+}
+
+.dark-mode > main > .projects > .projects__container {
+    border-color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__container > .project > .project__image > img {
+    border-color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__container > .project > .project__data > .project--title > a > img {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
 }
 
 // .projects {
