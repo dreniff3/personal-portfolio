@@ -28,45 +28,61 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 
+function showProject(project) {
+    if (project == 'battleship') {
+        document.getElementById('dreamoffer').style.display = 'none';
+        document.getElementById('exerciselog').style.display = 'none';
+        document.getElementById('battleship').style.display = 'block';
+    } else if (project == 'exerciselog') {
+        document.getElementById('dreamoffer').style.display = 'none';
+        document.getElementById('exerciselog').style.display = 'block';
+        document.getElementById('battleship').style.display = 'none';
+    } else {
+        document.getElementById('dreamoffer').style.display = 'block';
+        document.getElementById('exerciselog').style.display = 'none';
+        document.getElementById('battleship').style.display = 'none';
+    }
+}
 
-/*
-*
-    NAVBAR LINK HIGHLIGHTING
-*
-*/
-let menuLinks = document.querySelectorAll(".navigation__item");
-menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        menuLinks.forEach((el) => el.classList.remove("active"));
-        link.classList.add("active");
-    })
-})
+
+// /*
+// *
+//     NAVBAR LINK HIGHLIGHTING
+// *
+// */
+// let menuLinks = document.querySelectorAll(".navigation__item");
+// menuLinks.forEach((link) => {
+//     link.addEventListener("click", () => {
+//         menuLinks.forEach((el) => el.classList.remove("active"));
+//         link.classList.add("active");
+//     })
+// })
 
 
-/*
-*
-    TYPEWRITER ANIMATION
-*
-*/
-let content = [
-    "Web Developer",
-    "Programmer",
-    "Artist",
-    "Cat Dad",
-    "Amateur Chef",
-    "Avid Reader"
-];
+// /*
+// *
+//     TYPEWRITER ANIMATION
+// *
+// */
+// let content = [
+//     "Web Developer",
+//     "Programmer",
+//     "Artist",
+//     "Cat Dad",
+//     "Amateur Chef",
+//     "Avid Reader"
+// ];
 
-let phrase = 0;
-let phraseIndex = 0;
+// let phrase = 0;
+// let phraseIndex = 0;
 
-// holds the return value from setInterval
-let intervalVal;
+// // holds the return value from setInterval
+// let intervalVal;
 
-// holds the text
-let element = document.querySelector(".text");
+// // holds the text
+// let element = document.querySelector(".text");
 
-let cursor = document.querySelector(".cursor");
+// let cursor = document.querySelector(".cursor");
 
 // // implements typing effect
 // function Type() {
