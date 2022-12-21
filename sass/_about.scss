@@ -108,6 +108,8 @@
 
         font-family: 'Permanent Marker', sans-serif;
         letter-spacing: 1px;
+
+        pointer-events: none;
     }
 
     &__form--info > &--wrapper > #skills {

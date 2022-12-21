@@ -153,7 +153,8 @@ html {
     background-color: transparent;
     color: inherit;
     font-family: 'Permanent Marker', sans-serif;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    pointer-events: none; }
   .about__form--info > .about--wrapper > #skills {
     border: none; }
     .about__form--info > .about--wrapper > #skills > legend {
