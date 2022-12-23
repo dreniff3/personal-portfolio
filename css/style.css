@@ -47,7 +47,6 @@ html {
   grid-area: footer;
   background-color: #EDEDED; }
   .container > .footer > p {
-    font-size: 1.25rem;
     font-weight: 500;
     color: #EDEDED;
     font-family: inherit; }
@@ -56,20 +55,12 @@ html {
   padding-top: 24rem;
   padding-left: 41.5%; }
 
-.container > #about__footer {
-  grid-area: footer;
-  background-color: transparent;
+#about__footer {
+  margin-top: -20rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 0;
-  margin-top: -20rem;
-  max-height: 5rem; }
-  .container > #about__footer > p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: inherit;
-    font-family: inherit; }
+  padding-left: 0; }
 
 .container.dark-mode {
   background-color: black;
@@ -80,101 +71,6 @@ html {
     reveal sections on scroll
 *
 */
-.about {
-  display: grid;
-  grid-template-columns: 50rem 1fr;
-  height: 80vh;
-  width: 100%; }
-  .about__img {
-    width: 100%;
-    padding: 10rem;
-    margin-top: -7rem; }
-    .about__img > img {
-      height: 60rem; }
-  .about__form {
-    align-self: center;
-    padding-right: 10rem;
-    margin-top: -8rem;
-    margin-left: 3rem; }
-  .about__form--info {
-    padding: 2rem;
-    border: solid 10px inherit;
-    border-radius: 12px 0 12px 0;
-    display: flex;
-    flex-direction: column; }
-    .about__form--info > legend {
-      font-family: 'Oi', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 0.5rem;
-      padding: 0 1rem; }
-    .about__form--info > .sub-wrapper {
-      display: flex;
-      align-items: center;
-      margin-top: -1rem;
-      margin-left: -0.5rem;
-      margin-bottom: 1.5rem; }
-      .about__form--info > .sub-wrapper > img {
-        width: 3rem;
-        padding: 0 0.5rem; }
-      .about__form--info > .sub-wrapper > h3 {
-        font-size: 1.5rem; }
-  .about__form--info > .about--wrapper {
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem; }
-    .about__form--info > .about--wrapper:not(:last-child) {
-      border-bottom: 2px dotted #202020; }
-    .about__form--info > .about--wrapper:last-child {
-      margin-bottom: -3rem; }
-    .about__form--info > .about--wrapper > label {
-      font-size: 1.5rem; }
-    .about__form--info > .about--wrapper #details, .about__form--info > .about--wrapper #actions, .about__form--info > .about--wrapper #inventory {
-      width: 100%;
-      background-color: transparent;
-      border: none;
-      color: inherit;
-      overflow: hidden;
-      resize: none;
-      padding-left: 6.7rem;
-      margin-top: -1.9rem;
-      font-family: 'Permanent Marker', 'Pangolin', sans-serif;
-      letter-spacing: 1px; }
-    .about__form--info > .about--wrapper #actions,
-    .about__form--info > .about--wrapper #inventory {
-      font-family: 'Redacted Script', sans-serif; }
-    .about__form--info > .about--wrapper #actions {
-      padding-left: 5rem; }
-    .about__form--info > .about--wrapper #inventory {
-      padding-left: 6rem;
-      margin-bottom: -3.5rem; }
-  .about__form--info > .about--wrapper > input {
-    padding-left: 0.8rem; }
-  .about__form--info > .about--wrapper > input,
-  .about__form--info > .about--wrapper > #skills > .skills-wrapper > input {
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    font-family: 'Permanent Marker', sans-serif;
-    letter-spacing: 1px;
-    pointer-events: none; }
-  .about__form--info > .about--wrapper > #skills {
-    border: none; }
-    .about__form--info > .about--wrapper > #skills > legend {
-      font-size: 1.5rem; }
-  .about .skills-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: -1.8rem; }
-    .about .skills-wrapper > input {
-      padding-left: 5.2rem;
-      padding-bottom: 0.5rem; }
-
-.dark-mode > main > .about > .about__form > .about__form--info > .about--wrapper {
-  border-color: #EDEDED; }
-
-.dark-mode > main > .about > .about__form > .about__form--info > .sub-wrapper > img {
-  -webkit-filter: invert(100%);
-  filter: invert(100%); }
-
 .header {
   display: flex;
   align-items: center;
@@ -519,6 +415,101 @@ html {
   filter: invert(0%); }
 
 .dark-mode > main > .projects > .projects__container > .project > .project__data > .project--title > a > img.project--link {
+  -webkit-filter: invert(100%);
+  filter: invert(100%); }
+
+.about {
+  display: grid;
+  grid-template-columns: 50rem 1fr;
+  height: 80vh;
+  width: 100%; }
+  .about__img {
+    width: 100%;
+    padding: 10rem;
+    margin-top: -7rem; }
+    .about__img > img {
+      height: 60rem; }
+  .about__form {
+    align-self: center;
+    padding-right: 10rem;
+    margin-top: -8rem;
+    margin-left: 3rem; }
+  .about__form--info {
+    padding: 2rem;
+    border: solid 3px inherit;
+    border-radius: 12px 0 12px 0;
+    display: flex;
+    flex-direction: column; }
+    .about__form--info > legend {
+      font-family: 'Oi', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.5rem;
+      padding: 0 1rem; }
+    .about__form--info > .sub-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: -1rem;
+      margin-left: -0.5rem;
+      margin-bottom: 1.5rem; }
+      .about__form--info > .sub-wrapper > img {
+        width: 3rem;
+        padding: 0 0.5rem; }
+      .about__form--info > .sub-wrapper > h3 {
+        font-size: 1.5rem; }
+  .about__form--info > .about--wrapper {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem; }
+    .about__form--info > .about--wrapper:not(:last-child) {
+      border-bottom: 2px dotted #202020; }
+    .about__form--info > .about--wrapper:last-child {
+      margin-bottom: -3rem; }
+    .about__form--info > .about--wrapper > label {
+      font-size: 1.5rem; }
+    .about__form--info > .about--wrapper #details, .about__form--info > .about--wrapper #actions, .about__form--info > .about--wrapper #inventory {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      overflow: hidden;
+      resize: none;
+      padding-left: 6.7rem;
+      margin-top: -1.9rem;
+      font-family: 'Permanent Marker', 'Pangolin', sans-serif;
+      letter-spacing: 1px; }
+    .about__form--info > .about--wrapper #actions,
+    .about__form--info > .about--wrapper #inventory {
+      font-family: 'Redacted Script', sans-serif; }
+    .about__form--info > .about--wrapper #actions {
+      padding-left: 5rem; }
+    .about__form--info > .about--wrapper #inventory {
+      padding-left: 6rem;
+      margin-bottom: -3.5rem; }
+  .about__form--info > .about--wrapper > input {
+    padding-left: 0.8rem; }
+  .about__form--info > .about--wrapper > input,
+  .about__form--info > .about--wrapper > #skills > .skills-wrapper > input {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: 'Permanent Marker', sans-serif;
+    letter-spacing: 1px;
+    pointer-events: none; }
+  .about__form--info > .about--wrapper > #skills {
+    border: none; }
+    .about__form--info > .about--wrapper > #skills > legend {
+      font-size: 1.5rem; }
+  .about .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1.8rem; }
+    .about .skills-wrapper > input {
+      padding-left: 5.2rem;
+      padding-bottom: 0.5rem; }
+
+.dark-mode > main > .about > .about__form > .about__form--info > .about--wrapper {
+  border-color: #EDEDED; }
+
+.dark-mode > main > .about > .about__form > .about__form--info > .sub-wrapper > img {
   -webkit-filter: invert(100%);
   filter: invert(100%); }
 
