@@ -44,6 +44,36 @@ function showProject(project) {
     }
 }
 
+let footer = document.getElementById('footer');
+
+function showPage(page) {
+    if (page == 'home') {
+        document.getElementById('home').style.display = 'block';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('projects').style.display = 'none';
+        document.getElementById('contact').style.display = 'none';
+        footer.id = 'footer';
+    } else if (page == 'about') {
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('about').style.display = 'grid';
+        document.getElementById('projects').style.display = 'none';
+        document.getElementById('contact').style.display = 'none';
+        footer.id = 'about__footer';
+    } else if (page == 'projects') {
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('projects').style.display = 'grid';
+        document.getElementById('contact').style.display = 'none';
+        footer.id = 'about__footer';
+    } else if (page == 'contact') {
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('projects').style.display = 'none';
+        document.getElementById('contact').style.display = 'flex';
+        footer.id = 'about__footer';
+    }
+}
+
 
 // /*
 // *
