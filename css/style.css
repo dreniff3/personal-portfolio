@@ -43,25 +43,6 @@ html {
 .container > main {
   grid-area: main; }
 
-.container > .footer {
-  grid-area: footer;
-  background-color: #EDEDED; }
-  .container > .footer > p {
-    font-weight: 500;
-    color: #EDEDED;
-    font-family: inherit; }
-
-.footer {
-  padding-top: 24rem;
-  padding-left: 41.5%; }
-
-#about__footer {
-  margin-top: -20rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 0; }
-
 .container.dark-mode {
   background-color: black;
   color: #EDEDED; }
@@ -222,6 +203,25 @@ html {
   background-position: 100%;
   color: #202020;
   transform: translateX(1rem); }
+
+.container > .footer {
+  grid-area: footer;
+  background-color: #EDEDED; }
+  .container > .footer > p {
+    font-weight: 500;
+    color: #EDEDED;
+    font-family: inherit; }
+
+.footer {
+  padding-top: 24rem;
+  padding-left: 41.5%; }
+
+#about__footer {
+  margin-top: -20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0; }
 
 .home {
   margin-top: -5rem;

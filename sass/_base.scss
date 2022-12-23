@@ -65,56 +65,6 @@ html {
     grid-area: main;
 }
 
-.container > .footer {
-    grid-area: footer;
-
-    background-color: $color-primary-light;
-    
-    & > p {
-        // font-size: 1.25rem;
-        font-weight: 500;
-        color: $color-primary-light;
-        font-family: inherit;
-    }
-}
-
-.footer {
-    padding-top: 24rem;
-    padding-left: 41.5%;
-}
-
-#about__footer {
-    margin-top: -20rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0;
-
-    // grid-area: footer;
-    
-    // background-color: transparent;
-
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // padding-left: 0;
-    // margin-top: -20rem;
-    // max-height: 5rem;
-        
-    // & > p {
-    //     font-size: 1.25rem;
-    //     font-weight: 500;
-    //     color: inherit;
-    //     font-family: inherit;
-    // }
-}
-
-// toggles bg-color and text-color of entire page
-.container.dark-mode {
-    background-color: $color-primary-darkest;
-    color: $color-primary-light;
-}
-
 /* 
 *
     reveal sections on scroll

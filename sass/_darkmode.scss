@@ -1,0 +1,154 @@
+// BASE
+
+// toggles bg-color and text-color of entire page
+.container.dark-mode {
+    background-color: $color-primary-darkest;
+    color: $color-primary-light;
+}
+
+// HEADER 
+
+// toggles bg-color of navbar
+.dark-mode > .header {
+    background-color: $color-primary-darkest;
+    box-sizing: none;
+}
+
+// toggles color of logo and button in navbar
+.dark-mode > .header > .header__logo > img,
+.dark-mode > .header > .toggle-btn > img {
+    // invert png so black becomes white, and vice versa
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.dark-mode > .header > .navigation > .navigation__button > .navigation__icon {
+    &,
+    &::before,
+    &::after {
+        background-color: $color-primary-light;
+    }
+}
+
+.navigation > .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent;
+        
+}
+
+.dark-mode > .header > .navigation > .navigation__nav > .navigation__list > .navigation__item {
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left    : 30%;
+        bottom  : 0;
+        height  : 2px;
+        width   : 40%;
+        border-bottom: 1px solid $color-primary-light;
+    }
+}
+
+.dark-mode > .header > .navigation > .navigation__nav > .navigation__list > .navigation__item > .navigation__link {
+    &:link,
+    &:visited {
+        color: $color-primary-light;
+        background-image: linear-gradient(
+            120deg,
+            transparent 0%, transparent 50%, $color-primary-light 50%
+            );
+        background-size: 250%;
+        transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: $color-primary-dark;
+        transform: translateX(1rem);
+    }
+}
+
+// HOME
+
+// toggles color of Github logo
+.dark-mode > main > .home > .home__data > .home__data--social > a > img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+// toggles color of LinkedIn logo
+.dark-mode > main > .home > .home__data > .home__data--social > a > img.linkedin-logo {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
+}
+
+.dark-mode > main > .home > .home__data > .home__data--name > h1 {
+    color: $color-primary-light;
+}
+
+.dark-mode > main > .home > .home__data > .home__data--name > h1::before {
+    background-color: $color-primary-light;
+}
+
+// PROJECTS
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list {
+    border-color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a { 
+    color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:link,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:visited {
+    color: $color-primary-light;
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%, transparent 50%, $color-primary-light 50%, $color-primary-light 100%
+    );
+}
+
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:hover,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:active,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:target,
+.dark-mode > main > .projects > .projects__nav > .projects__nav--list > .projects__nav--item > a:focus {
+    color: $color-primary-dark;
+}
+
+.dark-mode > main > .projects > .projects__container {
+    border-color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__container > .project > .project__image > img {
+    border-color: $color-primary-light;
+}
+
+.dark-mode > main > .projects > .projects__container > .project > .project__data > .project--title > a > img {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
+}
+
+.dark-mode > main > .projects > .projects__container > .project > .project__data > .project--title > a > img.project--link {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+// ABOUT 
+
+.dark-mode > main > .about > .about__form > .about__form--info > .about--wrapper {
+    border-color: $color-primary-light;
+}
+
+// toggles color of icons
+.dark-mode > main > .about > .about__form > .about__form--info > .sub-wrapper > img {
+    // invert png so black becomes white, and vice versa
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+// CONTACT 
+
+.dark-mode > main > .contact > a > img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}

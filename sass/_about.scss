@@ -133,17 +133,6 @@
     }
 }
 
-.dark-mode > main > .about > .about__form > .about__form--info > .about--wrapper {
-    border-color: $color-primary-light;
-}
-
-// toggles color of icons
-.dark-mode > main > .about > .about__form > .about__form--info > .sub-wrapper > img {
-    // invert png so black becomes white, and vice versa
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-}
-
 // .about {
 //     padding-top: 7rem;
 
