@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Code icons created by Icongeek26 - Flaticon -->
+    <link rel="shortcut icon" type="image/png" href="img/web-programming.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <title>Don Reniff &mdash; Full Stack Web Developer</title>
+</head>
+
+<body class="container dark-mode">
+
+    <!-- NAVBAR -->
+    <header class="header">
+
+        <div class="navigation">
+
+            <input 
+                type="checkbox" 
+                id="nav-toggle" 
+                class="navigation__checkbox"
+            />
+
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+
+            <div class="navigation__background"></div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="about.html" class="navigation__link">About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="projects.html" class="navigation__link">Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="contact.html" class="navigation__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header__logo">
+            <img src="img/signature.png" alt="My signature">
+        </div>
+
+        <button class="toggle-btn">
+            <!-- Sunglasses icons created by Rohim - Flaticon -->
+            <img src="img/sunglasses.png" alt="Dark mode button" id="dark-btn" style="display: none;">
+            <!-- Reading eyeglasses icon created by Freepik - Flaticon -->
+            <img src="img/reading-eyeglasses.png" alt="Light mode button" id="light-btn">
+        </button>
+
+    </header>
+
+    <main>
+
+        <div class="projects">
+
+            <div class="projects__nav">
+                <ul class="projects__nav--list">
+                    <li class="projects__nav--item">
+                        <a href="#" onclick="showProject('dreamoffer')">DreamOffer</a>
+                    </li>
+                    <li class="projects__nav--item">
+                        <a href="#" onclick="showProject('exerciselog')">Exercise Log</a>
+                    </li>
+                    <li class="projects__nav--item">
+                        <a href="#" onclick="showProject('battleship')">Python Battleship</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="projects__container">
+
+                <!-- DreamOffer -->
+                <div class="project" id="dreamoffer" style="display: none;">
+                    <div class="project__image">
+                        <img src="img/cs340_project_img3.png" alt="DreamOffer project img" class="project__img" id="dreamOffer-img">
+                        <div class="dreamOffer-img"></div>
+                    </div>
+                    <div class="project__data">
+                        <!-- Link icon created by Kiranshastry Lineal - Flaticon -->
+                        <h4 class="project--title">DreamOffer <a href="https://github.com/sophlil/DreamOffer"><img src="img/GitHub_mark.png" alt="Github logo"></a><a href="https://dream-offer.herokuapp.com/"><img src="img/link.png" alt="Link img" class="project--link"></a></h4>
+                        <div class="project--stack">
+                            <span class="project--stack-item">HTML</span> |
+                            <span class="project--stack-item">CSS</span> |
+                            <span class="project--stack-item">JavaScript</span> |
+                            <span class="project--stack-item">Python</span> |
+                            <span class="project--stack-item">Flask</span> |
+                            <span class="project--stack-item">MySQL</span>
+                        </div>
+                        <p class="project--text">DreamOffer is a Job Application Tracking database driven web application that helps applicants keep track of where they have applied and when their applications were submitted in an organized and simple to use system.</p>
+                    </div>
+                </div>
+
+                <!-- Exercise Log -->
+                <div class="project" id="exerciselog" style="display: none;">
+                    <div class="project__image">
+                        <img src="img/battleship.png" alt="Battleship project img" class="project__img" id="exerciseLog">
+                    </div>
+                    <div class="project__data">
+                        <h4 class="project--title">Exercise Log <a href="#"><img src="img/GitHub_mark.png" alt="Github logo"></a></h4>
+                        <div class="project--stack">
+                            <span class="project--stack-item">HTML</span> |
+                            <span class="project--stack-item">CSS</span> |
+                            <span class="project--stack-item">JavaScript</span> |
+                            <span class="project--stack-item">React</span> |
+                            <span class="project--stack-item">Node.js</span> |
+                            <span class="project--stack-item">Express.js</span> |
+                            <span class="project--stack-item">MongoDB</span>
+                        </div>
+                        <p class="project--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto perferendis nostrum recusandae, neque adipisci iure earum deleniti provident ducimus unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+                <!-- Battleship -->
+                <div class="project" id="battleship" style="display: none;">
+                    <div class="project__image">
+                        <img src="img/battleship.png" alt="Battleship project img" class="project__img" id="battleship">
+                    </div>
+                    <div class="project__data">
+                        <h4 class="project--title">Battleship <a href="https://github.com/dreniff3/python-battleship-with-gui"><img src="img/GitHub_mark.png" alt="Github logo"></a></h4>
+                        <div class="project--stack">
+                            <span class="project--stack-item">Python</span>
+                        </div>
+                        <p class="project--text">A Python program that allows two people to play the game Battleship, originally created as a school project, meant to be played in the terminal. During a break between quarters, I implemented a simple GUI for the game using Tkinter.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer" id="about__footer">
+        <p>&copy; Donald Reniff 2022</p>
+    </footer>
+
+</body>
+</html>
