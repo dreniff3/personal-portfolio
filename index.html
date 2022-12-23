@@ -34,16 +34,16 @@
             <nav class="navigation__nav">
                 <ul class="navigation__list">
                     <li class="navigation__item">
-                        <a href="index.html" class="navigation__link">Home</a>
+                        <a href="#" class="navigation__link" onclick="showPage('home')">Home</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="about.html" class="navigation__link">About</a>
+                        <a href="#" class="navigation__link" onclick="showPage('about')">About</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="projects.html" class="navigation__link">Projects</a>
+                        <a href="#" class="navigation__link" onclick="showPage('projects')">Projects</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="contact.html" class="navigation__link">Contact</a>
+                        <a href="#" class="navigation__link" onclick="showPage('contact')">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -131,6 +131,228 @@
         </section>
 
         <!-- ABOUT -->
+        <section class="about" id="about" style="display: none;">
+
+            <div class="about__img">
+                <img src="img/about-dark.png" alt="Me" id="dark-image">
+                <img src="img/about-light.png" alt="Me" id="light-image" style="display: none;">
+            </div>
+
+            <form action="#" class="about__form">
+
+                <fieldset class="about__form--info">
+                    <legend>Domains & Developers</legend>
+
+                    <div class="sub-wrapper">
+                        <!-- Reading eyeglasses icon created by Freepik - Flaticon -->
+                        <img src="img/sword.png" alt="sword">
+                        <h3>Character Sheet</h3>
+                        <!-- Reading eyeglasses icon created by Freepik - Flaticon -->
+                        <img src="img/sword.png" alt="sword">
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="number"> No. </label>
+                        <input 
+                            type="number" 
+                            id="number" 
+                            value="255"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="name">Name: </label>
+                        <input 
+                            type="text"
+                            id="name"
+                            value="Don Reniff"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="category">Category: </label>
+                        <input 
+                            type="text"
+                            id="category"
+                            value="Web Developer"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="location">Location: </label>
+                        <input 
+                            type="text"
+                            id="location"
+                            value="Ferndale, WA"
+                            readonly
+                        />
+                    </div>
+
+                    <div class="about--wrapper">
+                        <fieldset id="skills">
+                            <legend>Skills: </legend>
+                            <div class="skills-wrapper">
+                                <input 
+                                    type="text"
+                                    value="HTML &starf;&starf;&starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="CSS/Sass &starf;&starf;&starf;&starf;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="JavaScript &starf;&starf;&starf;&star;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Node.js &starf;&starf;&starf;&star;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="React &starf;&starf;&starf;&star;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Git &starf;&starf;&starf;&starf;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Python &starf;&starf;&starf;&starf;&starf;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Flask &starf;&starf;&starf;&star;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="Express.js &starf;&starf;&starf;&star;&star;"
+                                    readonly
+                                />
+                                <input 
+                                    type="text"
+                                    value="MongoDB &starf;&starf;&starf;&star;&star;"
+                                    readonly
+                                />
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="details">Details: </label>
+                        <textarea name="details" id="details" cols="20" rows="4" readonly>My name is Don Reniff. I'm currently a student enrolled in Oregon State University's online post-baccalaureate program. I am passionate about learning, and I aspire to become a full-stack Web Developer.</textarea>
+                    </div>
+
+                    <!-- <div class="about--wrapper">
+                        <label for="actions">Actions: </label>
+                        <textarea name="actions" id="actions" cols="20" rows="4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero omnis eveniet sunt alias perferendis minima facere nisi quisquam a illum, tenetur unde vitae dolor optio, repellat explicabo facilis ad ipsum.</textarea>
+                    </div>
+
+                    <div class="about--wrapper">
+                        <label for="inventory">Inventory: </label>
+                        <textarea name="inventory" id="inventory" cols="20" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis ipsa sit adipisci at, placeat est laborum expedita, illo molestias ipsam sint doloribus ad!</textarea>
+                    </div> -->
+
+                </fieldset>
+
+            </form>
+
+        </section>
+        
+        <!-- PROJECTS -->
+        <section class="projects" id="projects" style="display: none;">
+
+            <div class="projects__nav">
+                <ul class="projects__nav--list">
+                    <li class="projects__nav--item">
+                        <a href="#" onclick="showProject('dreamoffer')">DreamOffer</a>
+                    </li>
+                    <li class="projects__nav--item">
+                        <a href="#" onclick="showProject('exerciselog')">Exercise Log</a>
+                    </li>
+                    <li class="projects__nav--item">
+                        <a href="#" onclick="showProject('battleship')">Python Battleship</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="projects__container">
+
+                <!-- DreamOffer -->
+                <div class="project" id="dreamoffer" style="display: none;">
+                    <div class="project__image">
+                        <img src="img/cs340_project_img3.png" alt="DreamOffer project img" class="project__img" id="dreamOffer-img">
+                        <div class="dreamOffer-img"></div>
+                    </div>
+                    <div class="project__data">
+                        <!-- Link icon created by Kiranshastry Lineal - Flaticon -->
+                        <h4 class="project--title">DreamOffer <a href="https://github.com/sophlil/DreamOffer"><img src="img/GitHub_mark.png" alt="Github logo"></a><a href="https://dream-offer.herokuapp.com/"><img src="img/link.png" alt="Link img" class="project--link"></a></h4>
+                        <div class="project--stack">
+                            <span class="project--stack-item">HTML</span> |
+                            <span class="project--stack-item">CSS</span> |
+                            <span class="project--stack-item">JavaScript</span> |
+                            <span class="project--stack-item">Python</span> |
+                            <span class="project--stack-item">Flask</span> |
+                            <span class="project--stack-item">MySQL</span>
+                        </div>
+                        <p class="project--text">DreamOffer is a Job Application Tracking database driven web application that helps applicants keep track of where they have applied and when their applications were submitted in an organized and simple to use system.</p>
+                    </div>
+                </div>
+
+                <!-- Exercise Log -->
+                <div class="project" id="exerciselog" style="display: none;">
+                    <div class="project__image">
+                        <img src="img/battleship.png" alt="Battleship project img" class="project__img" id="exerciseLog">
+                    </div>
+                    <div class="project__data">
+                        <h4 class="project--title">Exercise Log <a href="#"><img src="img/GitHub_mark.png" alt="Github logo"></a></h4>
+                        <div class="project--stack">
+                            <span class="project--stack-item">HTML</span> |
+                            <span class="project--stack-item">CSS</span> |
+                            <span class="project--stack-item">JavaScript</span> |
+                            <span class="project--stack-item">React</span> |
+                            <span class="project--stack-item">Node.js</span> |
+                            <span class="project--stack-item">Express.js</span> |
+                            <span class="project--stack-item">MongoDB</span>
+                        </div>
+                        <p class="project--text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto perferendis nostrum recusandae, neque adipisci iure earum deleniti provident ducimus unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+                <!-- Battleship -->
+                <div class="project" id="battleship" style="display: none;">
+                    <div class="project__image">
+                        <img src="img/battleship.png" alt="Battleship project img" class="project__img" id="battleship">
+                    </div>
+                    <div class="project__data">
+                        <h4 class="project--title">Battleship <a href="https://github.com/dreniff3/python-battleship-with-gui"><img src="img/GitHub_mark.png" alt="Github logo"></a></h4>
+                        <div class="project--stack">
+                            <span class="project--stack-item">Python</span>
+                        </div>
+                        <p class="project--text">A Python program that allows two people to play the game Battleship, originally created as a school project, meant to be played in the terminal. During a break between quarters, I implemented a simple GUI for the game using Tkinter.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact" style="display: none;">
+            <a href="mailto:donaldreniff@gmail.com"><img src="img/envelope.png" alt="Mail icon"></a>
+        </section>
+
         <!-- <section class="about reveal" id="about">
             <h2 class="section-title">About</h2>
             <div class="about__container">
