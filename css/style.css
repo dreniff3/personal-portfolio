@@ -43,11 +43,6 @@ html {
 .container > main {
   grid-area: main; }
 
-/* 
-*
-    reveal sections on scroll
-*
-*/
 .container.dark-mode {
   background-color: black;
   color: #EDEDED; }
