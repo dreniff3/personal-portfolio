@@ -45,10 +45,9 @@ html {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     grid-template-areas: 'header'
-                         'main'
-                         'footer';
+                         'main';
 
     // smoother dark-mode/light-mode transition
     transition: background-color .4s ease-out;

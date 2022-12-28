@@ -30,8 +30,8 @@ html {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 'header' 'main';
   transition: background-color .4s ease-out; }
 
 .container > .header {
@@ -256,7 +256,6 @@ html {
     top: 0; }
 
 .container > .footer {
-  grid-area: footer;
   background-color: #EDEDED; }
   .container > .footer > p {
     font-weight: 500;
