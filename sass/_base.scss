@@ -33,7 +33,11 @@ $paragraph-font-size: 2.25rem;
 
 html {
     box-sizing: border-box;
-    font-size: 62.5% // 1rem = 10px
+    font-size: 62.5%; // 1rem = 10px
+
+    @media only screen and (max-width: 80em) {
+        font-size: 50%; // 1rem = 8px
+    }
 }
 
 .container {
@@ -44,7 +48,6 @@ html {
     overflow: hidden; // to keep the size at 100vh
 
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 'header'
                          'main';

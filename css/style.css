@@ -22,6 +22,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 80em) {
+    html {
+      font-size: 50%; } }
 
 .container {
   font-family: 'Marcellus SC', sans-serif;
@@ -29,7 +32,6 @@ html {
   color: black;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas: 'header' 'main';
   transition: background-color .4s ease-out; }
