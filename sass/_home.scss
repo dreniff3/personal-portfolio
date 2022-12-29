@@ -40,6 +40,11 @@
         position: relative;
         letter-spacing: 3.5px;
 
+        @media only screen and (max-width: 84.5em) {
+            width: 100%;
+            margin-left: -10rem;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -47,6 +52,10 @@
             height: 2px;
             background-color: $color-primary-dark;
             bottom: 22rem;
+
+            @media only screen and (max-width: 84.5em) {
+                width: 40rem;
+            }
         }
     }
 
@@ -56,6 +65,13 @@
         display: grid;
         grid-template-columns: 3.5rem repeat(2, min-content) 1fr;
         grid-gap: 5rem;
+
+        @media only screen and (max-width: 84.5em) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, min-content);
+            margin-left: -20rem;
+            margin-right: 10rem;
+        }
 
         img {
             width: 8rem;

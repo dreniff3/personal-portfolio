@@ -307,6 +307,10 @@ html {
     margin-left: -25rem;
     position: relative;
     letter-spacing: 3.5px; }
+    @media only screen and (max-width: 84.5em) {
+      .home__data > .home__data--name > h1 {
+        width: 100%;
+        margin-left: -10rem; } }
     .home__data > .home__data--name > h1::before {
       content: "";
       position: absolute;
@@ -314,12 +318,21 @@ html {
       height: 2px;
       background-color: #202020;
       bottom: 22rem; }
+      @media only screen and (max-width: 84.5em) {
+        .home__data > .home__data--name > h1::before {
+          width: 40rem; } }
   .home__data > .home__data--social {
     margin-top: 15rem;
     margin-left: 2.5rem;
     display: grid;
     grid-template-columns: 3.5rem repeat(2, min-content) 1fr;
     grid-gap: 5rem; }
+    @media only screen and (max-width: 84.5em) {
+      .home__data > .home__data--social {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+        margin-left: -20rem;
+        margin-right: 10rem; } }
     .home__data > .home__data--social img {
       width: 8rem;
       height: 3.5rem;
