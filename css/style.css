@@ -22,7 +22,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 80em) {
+  @media only screen and (max-width: 76em) {
     html {
       font-size: 50%; } }
 
