@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 *
     DARK-MODE BUTTON
