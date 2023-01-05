@@ -35,7 +35,11 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
 
-    @media only screen and (max-width: 76em) {
+    @media only screen and (max-width: 40em) {
+        font-size: 25%; // 1rem = 4px
+    }
+
+    @media only screen and (min-width: 41em) and (max-width: 76em) {
         font-size: 50%; // 1rem = 8px
     }
 }
