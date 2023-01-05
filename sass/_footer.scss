@@ -13,6 +13,10 @@
 .footer {
     padding-top: 24rem;
     padding-left: 41.5%;
+
+    @media only screen and (max-width: 50em) {
+        padding-top: 24.5rem;
+    }
 }
 
 #centered__footer {
