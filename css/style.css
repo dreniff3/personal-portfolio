@@ -512,6 +512,10 @@ html {
   @media only screen and (max-width: 50em) {
     .about {
       margin-right: -10rem; } }
+  @media only screen and (min-width: 51em) and (max-width: 70em) {
+    .about {
+      margin-left: -10rem;
+      margin-top: -20rem; } }
   .about__img {
     width: 100%;
     padding: 10rem;
@@ -519,6 +523,9 @@ html {
     @media only screen and (max-width: 50em) {
       .about__img {
         display: none; } }
+    @media only screen and (min-width: 51em) and (max-width: 70em) {
+      .about__img {
+        margin-top: 20rem; } }
     .about__img > img {
       height: 60rem; }
   .about__form {
