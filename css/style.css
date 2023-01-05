@@ -404,6 +404,10 @@ html {
       grid-template-columns: 1fr;
       grid-template-rows: min-content 1fr;
       margin-right: -10rem; } }
+  @media only screen and (min-width: 51em) and (max-width: 70em) {
+    .projects {
+      margin-left: -10rem;
+      height: auto; } }
   .projects__nav {
     grid-column: 1 / 2;
     margin-top: 10rem;
