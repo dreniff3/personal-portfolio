@@ -11,12 +11,22 @@
     font-family: 'Special Elite', 'IM Fell English', sans-serif;
     letter-spacing: 2px;
 
+    @media only screen and (max-width: 50em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
     &__nav {
         grid-column: 1 / 2;
         margin-top: 10rem;
         margin-left: 10rem;
         margin-right: -3rem;
 
+        @media only screen and (max-width: 50em) {
+            margin-left: -17rem;
+            margin-top: 0;
+            grid-row: 1 / 2;
+        }
 
         &--list {
             list-style: none;
@@ -24,11 +34,21 @@
 
             font-size: 1.8rem;
             padding: 2rem 5rem 2rem 3rem;
+
+            @media only screen and (max-width: 50em) {
+                display: flex;
+                border-left: none;
+                font-size: 1.2rem;
+            }
         }
 
         &--item {
             & > a {
                 padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+
+                @media only screen and (max-width: 50em) {
+                    margin-right: 2rem;
+                }
             }
 
             & > a:link,
@@ -69,6 +89,18 @@
         padding-top: 3rem;
         width: 60rem;
         height: 50rem;
+
+        @media only screen and (max-width: 50em) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+
+            width: 50rem;
+            
+            margin-left: -18rem;
+            margin-top: -7rem;
+            border-left: none;
+            // margin-right: 13rem;
+        }
     }
 
     &__container > .project > .project__image {

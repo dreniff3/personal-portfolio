@@ -396,18 +396,35 @@ html {
   padding-left: 5rem;
   font-family: 'Special Elite', 'IM Fell English', sans-serif;
   letter-spacing: 2px; }
+  @media only screen and (max-width: 50em) {
+    .projects {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content 1fr; } }
   .projects__nav {
     grid-column: 1 / 2;
     margin-top: 10rem;
     margin-left: 10rem;
     margin-right: -3rem; }
+    @media only screen and (max-width: 50em) {
+      .projects__nav {
+        margin-left: -17rem;
+        margin-top: 0;
+        grid-row: 1 / 2; } }
     .projects__nav--list {
       list-style: none;
       border-left: 2px solid #202020;
       font-size: 1.8rem;
       padding: 2rem 5rem 2rem 3rem; }
+      @media only screen and (max-width: 50em) {
+        .projects__nav--list {
+          display: flex;
+          border-left: none;
+          font-size: 1.2rem; } }
     .projects__nav--item > a {
       padding: 0.8rem 0.8rem 0.4rem 0.8rem; }
+      @media only screen and (max-width: 50em) {
+        .projects__nav--item > a {
+          margin-right: 2rem; } }
     .projects__nav--item > a:link,
     .projects__nav--item > a:visited {
       display: inline-block;
@@ -434,6 +451,14 @@ html {
     padding-top: 3rem;
     width: 60rem;
     height: 50rem; }
+    @media only screen and (max-width: 50em) {
+      .projects__container {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: 50rem;
+        margin-left: -18rem;
+        margin-top: -7rem;
+        border-left: none; } }
   .projects__container > .project > .project__image {
     width: 100%;
     text-align: center; }
