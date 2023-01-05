@@ -277,6 +277,9 @@ html {
 .footer {
   padding-top: 24rem;
   padding-left: 41.5%; }
+  @media only screen and (max-width: 50em) {
+    .footer {
+      padding-top: 24.5rem; } }
 
 #centered__footer {
   margin-top: -20rem;
@@ -503,7 +506,7 @@ html {
     flex-direction: column; }
     @media only screen and (max-width: 50em) {
       .about__form--info {
-        padding-bottom: 2rem; } }
+        padding-bottom: 3rem; } }
     .about__form--info > legend {
       font-family: 'Oi', sans-serif;
       font-size: 2rem;
