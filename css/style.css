@@ -459,14 +459,17 @@ html {
       .projects__container {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        width: 50rem;
-        margin-left: -18rem;
+        width: 30rem;
+        margin-left: -11rem;
         margin-top: -7rem;
         border-left: none;
         padding-left: 6rem; } }
   .projects__container > .project > .project__image {
     width: 100%;
     text-align: center; }
+    @media only screen and (max-width: 50em) {
+      .projects__container > .project > .project__image > #dreamOffer-img {
+        margin-left: -5rem; } }
     .projects__container > .project > .project__image > img {
       height: 25rem;
       margin-bottom: 1.8rem;
@@ -499,6 +502,9 @@ html {
     display: flex;
     justify-content: space-around;
     margin-bottom: 1.8rem; }
+    @media only screen and (max-width: 70em) {
+      .projects__container > .project > .project__data > .project--stack {
+        font-size: 1rem; } }
   .projects__container > .project > .project__data > p {
     font-size: 1.4rem;
     text-align: justify;

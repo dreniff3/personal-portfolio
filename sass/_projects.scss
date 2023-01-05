@@ -96,9 +96,9 @@
             grid-column: 1 / 2;
             grid-row: 2 / 3;
 
-            width: 50rem;
+            width: 30rem;
             
-            margin-left: -18rem;
+            margin-left: -11rem;
             margin-top: -7rem;
             border-left: none;
             padding-left: 6rem;
@@ -108,6 +108,13 @@
     &__container > .project > .project__image {
         width: 100%;
         text-align: center;
+
+        & > #dreamOffer-img {
+
+            @media only screen and (max-width: 50em) {
+                margin-left: -5rem;
+            }
+        }
 
         & > img {
             height: 25rem;
@@ -159,6 +166,10 @@
         justify-content: space-around;
 
         margin-bottom: 1.8rem;
+
+        @media only screen and (max-width: 70em) {
+            font-size: 1rem;
+        }
     }
 
     &__container > .project > .project__data > p {
