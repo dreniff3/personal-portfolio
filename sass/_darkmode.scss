@@ -67,6 +67,15 @@
     }
 }
 
+// HEADER 
+
+.dark-mode > .header > .navigation > .navigation__nav {
+    @media only screen and (max-width: 50em) {
+        height: 20vh;
+        background-color: $color-primary-darkest;
+    }
+}
+
 // HOME
 
 // toggles color of Github logo

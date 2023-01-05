@@ -84,6 +84,11 @@ html {
   color: #202020;
   transform: translateX(1rem); }
 
+@media only screen and (max-width: 50em) {
+  .dark-mode > .header > .navigation > .navigation__nav {
+    height: 20vh;
+    background-color: black; } }
+
 .dark-mode > main > .home > .home__data > .home__data--social > a > img {
   -webkit-filter: invert(100%);
   filter: invert(100%); }
@@ -194,6 +199,11 @@ html {
     padding: 1rem;
     align-content: center;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    @media only screen and (max-width: 50em) {
+      .navigation__nav {
+        height: 20vh;
+        background-color: #EDEDED;
+        transition: background-color .4s ease-out; } }
   .navigation__list {
     text-align: center;
     list-style: none; }
@@ -285,6 +295,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media only screen and (max-width: 50em) {
+      .home__data {
+        flex-direction: column;
+        position: relative; } }
   .home__data--img {
     margin-top: 8.25rem;
     padding-top: 3rem;
@@ -298,6 +312,11 @@ html {
     width: 100%;
     text-align: center;
     padding-top: 25rem; }
+    @media only screen and (max-width: 50em) {
+      .home__data > .home__data--name {
+        position: absolute;
+        left: 10rem;
+        top: -8rem; } }
   .home__data > .home__data--name > h1 {
     width: 200%;
     font-family: 'Notable', sans-serif;
@@ -307,6 +326,9 @@ html {
     margin-left: -25rem;
     position: relative;
     letter-spacing: 3.5px; }
+    @media only screen and (max-width: 50em) {
+      .home__data > .home__data--name > h1 {
+        font-size: 4rem; } }
     @media only screen and (max-width: 84.5em) {
       .home__data > .home__data--name > h1 {
         width: 100%;
@@ -318,6 +340,9 @@ html {
       height: 2px;
       background-color: #202020;
       bottom: 22rem; }
+      @media only screen and (max-width: 50em) {
+        .home__data > .home__data--name > h1::before {
+          display: none; } }
       @media only screen and (max-width: 84.5em) {
         .home__data > .home__data--name > h1::before {
           width: 40rem; } }
@@ -327,6 +352,11 @@ html {
     display: grid;
     grid-template-columns: 3.5rem repeat(2, min-content) 1fr;
     grid-gap: 5rem; }
+    @media only screen and (max-width: 50em) {
+      .home__data > .home__data--social {
+        display: flex;
+        position: absolute;
+        top: 8rem; } }
     @media only screen and (max-width: 84.5em) {
       .home__data > .home__data--social {
         grid-template-columns: 1fr;
@@ -345,6 +375,9 @@ html {
       grid-column: 3 / 4;
       -webkit-filter: invert(100%);
       filter: invert(100%); }
+      @media only screen and (max-width: 50em) {
+        .home__data > .home__data--social img.linkedin-logo {
+          margin-left: -4rem; } }
     .home__data > .home__data--social img:hover,
     .home__data > .home__data--social img:active {
       opacity: 1; }
