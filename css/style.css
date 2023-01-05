@@ -399,7 +399,8 @@ html {
   @media only screen and (max-width: 50em) {
     .projects {
       grid-template-columns: 1fr;
-      grid-template-rows: min-content 1fr; } }
+      grid-template-rows: min-content 1fr;
+      margin-right: -10rem; } }
   .projects__nav {
     grid-column: 1 / 2;
     margin-top: 10rem;
@@ -504,6 +505,9 @@ html {
   grid-template-columns: 50rem 1fr;
   height: 80vh;
   width: 100%; }
+  @media only screen and (max-width: 50em) {
+    .about {
+      margin-right: -10rem; } }
   .about__img {
     width: 100%;
     padding: 10rem;
