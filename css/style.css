@@ -283,8 +283,8 @@ html {
   @media only screen and (max-width: 50em) {
     .footer {
       position: absolute;
-      top: -6rem;
-      left: 1.5rem; } }
+      top: -6.5rem;
+      right: 2.5rem; } }
 
 #centered__footer {
   margin-top: -20rem;
@@ -316,7 +316,7 @@ html {
     width: 100%; }
     @media only screen and (max-width: 50em) {
       .home__data--img {
-        margin-top: 12rem;
+        margin-top: 14rem;
         width: 120%; } }
     .home__data--img > img {
       width: 100%;
@@ -374,7 +374,7 @@ html {
       .home__data > .home__data--social {
         display: flex;
         position: absolute;
-        top: 9rem;
+        top: 10rem;
         right: 3rem; } }
     @media only screen and (max-width: 84.5em) {
       .home__data > .home__data--social {
