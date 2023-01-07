@@ -13,7 +13,8 @@
     padding-left: 41.5%;
 
     @media only screen and (max-width: 50em) {
-        padding-top: 18rem;
+        position: absolute;
+        top: -5rem;
     }
 }
 

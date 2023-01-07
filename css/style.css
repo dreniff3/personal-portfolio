@@ -282,7 +282,8 @@ html {
   padding-left: 41.5%; }
   @media only screen and (max-width: 50em) {
     .footer {
-      padding-top: 18rem; } }
+      position: absolute;
+      top: -5rem; } }
 
 #centered__footer {
   margin-top: -20rem;
@@ -314,7 +315,7 @@ html {
     width: 100%; }
     @media only screen and (max-width: 50em) {
       .home__data--img {
-        margin-top: 24rem;
+        margin-top: 9rem;
         width: 120%; } }
     .home__data--img > img {
       width: 100%;
@@ -323,7 +324,7 @@ html {
       margin-bottom: -0.5rem; }
       @media only screen and (max-width: 50em) {
         .home__data--img > img {
-          height: 120rem; } }
+          height: 100%; } }
   .home__data > .home__data--name {
     width: 100%;
     text-align: center;
