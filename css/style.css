@@ -374,8 +374,8 @@ html {
       .home__data > .home__data--social {
         display: flex;
         position: absolute;
-        top: 12.5rem;
-        right: 35rem; } }
+        top: 9rem;
+        right: 3rem; } }
     @media only screen and (max-width: 84.5em) {
       .home__data > .home__data--social {
         grid-template-columns: 1fr;
