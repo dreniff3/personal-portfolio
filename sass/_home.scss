@@ -22,6 +22,7 @@
         width: 100%;
 
         @media only screen and (max-width: 50em) {
+            margin-top: 24rem;
             width: 120%;
         }
 
@@ -30,6 +31,10 @@
             height: 75rem;
             object-fit: cover;
             margin-bottom: -0.5rem;
+            
+            @media only screen and (max-width: 50em) {
+                height: 120rem;
+            }
         }
     }
 
@@ -41,7 +46,7 @@
         @media only screen and (max-width: 50em) {
             position: absolute;
             left: 10rem;
-            top: -8rem;
+            top: -3rem;
         }
     }
 
@@ -93,7 +98,7 @@
             display: flex;
 
             position: absolute;
-            top: 8rem;
+            top: 13rem;
         }
 
         @media only screen and (max-width: 84.5em) {

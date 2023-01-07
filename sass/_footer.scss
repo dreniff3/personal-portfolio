@@ -1,6 +1,4 @@
 .container > .footer {
-    // grid-area: footer;
-
     background-color: $color-primary-light;
     
     & > p {
@@ -15,7 +13,7 @@
     padding-left: 41.5%;
 
     @media only screen and (max-width: 50em) {
-        padding-top: 24.5rem;
+        padding-top: 18rem;
     }
 }
 
