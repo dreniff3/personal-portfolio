@@ -103,8 +103,8 @@
             display: flex;
 
             position: absolute;
-            top: 10rem;
-            right: 3rem;
+            top: 6.5rem;
+            right: 0;
         }
 
         @media only screen and (max-width: 84.5em) {
@@ -120,6 +120,11 @@
             opacity: .7;
 
             grid-column: 2 / 3;
+
+            @media only screen and (max-width: 50em) {
+                width: 6rem;
+                height: 2.625rem;
+            }
         }
 
         img.linkedin-logo {
@@ -133,6 +138,8 @@
             filter: invert(100%);
 
             @media only screen and (max-width: 50em) {
+                width: 2.625rem;
+                height: 2.625rem;
                 margin-left: -4rem;
             }
         }
