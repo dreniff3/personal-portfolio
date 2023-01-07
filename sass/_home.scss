@@ -26,7 +26,7 @@
         width: 100%;
 
         @media only screen and (max-width: 50em) {
-            margin-top: 9rem;
+            margin-top: 12rem;
             width: 120%;
         }
 
@@ -103,7 +103,8 @@
             display: flex;
 
             position: absolute;
-            top: 13rem;
+            top: 9rem;
+            right: 3rem;
         }
 
         @media only screen and (max-width: 84.5em) {
