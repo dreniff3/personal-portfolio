@@ -121,6 +121,14 @@
             }
         }
 
+        & > #exerciseLog-img,
+        & > #battleship-img {
+
+            @media only screen and (max-width: 50em) {
+                margin-left: -8rem;
+            }
+        }
+
         & > img {
             height: 25rem;
             margin-bottom: 1.8rem;

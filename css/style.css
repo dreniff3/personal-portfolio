@@ -493,6 +493,10 @@ html {
     @media only screen and (max-width: 50em) {
       .projects__container > .project > .project__image > #dreamOffer-img {
         margin-left: -8rem; } }
+    @media only screen and (max-width: 50em) {
+      .projects__container > .project > .project__image > #exerciseLog-img,
+      .projects__container > .project > .project__image > #battleship-img {
+        margin-left: -8rem; } }
     .projects__container > .project > .project__image > img {
       height: 25rem;
       margin-bottom: 1.8rem;
