@@ -504,13 +504,13 @@ html {
       transition: all 0.4s ease-in-out; }
     .projects__container > .project > .project__image > img:hover {
       transform: scale(1.1); }
+  @media only screen and (max-width: 50em) {
+    .projects__container > .project > .project__data {
+      margin-top: -2rem; } }
   .projects__container > .project > .project__data > .project--title {
     font-size: 1.8rem;
     text-align: center;
     padding: 1.2rem 0; }
-    @media only screen and (max-width: 50em) {
-      .projects__container > .project > .project__data > .project--title {
-        padding-top: 0; } }
   .projects__container > .project > .project__data > .project--title > a > img {
     vertical-align: middle;
     padding-bottom: 0.6rem;
