@@ -623,7 +623,7 @@ html {
         .about__form--info > .about--wrapper #details, .about__form--info > .about--wrapper #actions, .about__form--info > .about--wrapper #inventory {
           font-size: 1.2rem;
           padding-bottom: 3rem;
-          padding-left: 2rem; } }
+          padding-left: 3.5rem; } }
     .about__form--info > .about--wrapper #actions,
     .about__form--info > .about--wrapper #inventory {
       font-family: 'Redacted Script', sans-serif; }
