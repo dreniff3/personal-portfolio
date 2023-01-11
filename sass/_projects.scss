@@ -189,6 +189,7 @@
 
         @media only screen and (max-width: 70em) {
             font-size: 1rem;
+            margin-top: -1rem;
         }
     }
 
@@ -196,5 +197,9 @@
         font-size: 1.4rem;
         text-align: justify;
         line-height: 1.5;
+
+        @media only screen and (max-width: 70em) {
+            margin-top: -1rem;
+        }
     }
 }

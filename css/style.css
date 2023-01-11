@@ -534,11 +534,15 @@ html {
     margin-bottom: 1.8rem; }
     @media only screen and (max-width: 70em) {
       .projects__container > .project > .project__data > .project--stack {
-        font-size: 1rem; } }
+        font-size: 1rem;
+        margin-top: -1rem; } }
   .projects__container > .project > .project__data > p {
     font-size: 1.4rem;
     text-align: justify;
     line-height: 1.5; }
+    @media only screen and (max-width: 70em) {
+      .projects__container > .project > .project__data > p {
+        margin-top: -1rem; } }
 
 .about {
   display: grid;
