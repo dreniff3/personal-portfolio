@@ -4,9 +4,10 @@
     height: 80vh;
     width: 100%;
 
-    // @media only screen and (max-width: 50em) {
-    //     margin-right: -10rem;
-    // }
+    @media only screen and (max-width: 50em) {
+        margin-right: -10rem;
+        margin-top: 0;
+    }
 
     @media only screen and (min-width: 51em) and (max-width: 70em) {
         margin-left: -10rem;
