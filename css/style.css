@@ -492,7 +492,7 @@ html {
     text-align: center; }
     @media only screen and (max-width: 50em) {
       .projects__container > .project > .project__image > #dreamOffer-img {
-        margin-left: -5rem; } }
+        margin-left: -8rem; } }
     .projects__container > .project > .project__image > img {
       height: 25rem;
       margin-bottom: 1.8rem;
@@ -504,6 +504,9 @@ html {
     font-size: 1.8rem;
     text-align: center;
     padding: 1.2rem 0; }
+    @media only screen and (max-width: 50em) {
+      .projects__container > .project > .project__data > .project--title {
+        padding-top: 0; } }
   .projects__container > .project > .project__data > .project--title > a > img {
     vertical-align: middle;
     padding-bottom: 0.6rem;
