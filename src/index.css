@@ -8,10 +8,16 @@
 :root {
   /* colors */
   --backgroundColor: #F1ECE1;
+  --fontColor: #1a1818;
 
   /* fonts */
   --mainFont: 'Marcellus SC', sans-serif;
   --navFont: 'Aboreto', serif;
+
+  /* sizes */
+  --frameMargin: 20px;
+  --frameWidth: 1px;
+  --frameLength: 100%;
 }
 
 /*   ----- Reset  -----  */
@@ -25,4 +31,50 @@
 
 body {
   background: var(--backgroundColor);
+}
+
+/*   ----- Frame Component  -----  */
+.frame {
+  position: fixed;
+  z-index: 10;
+  left: var(--frameMargin);
+  right: var(--frameMargin);
+  top: var(--frameMargin);
+  bottom: var(--frameMargin);
+}
+
+.frame_line_left {
+  left: 0;
+  top: 0;
+  width: var(--frameWidth);
+  height: var(--frameLength);
+  position: absolute;
+  background-color: var(--fontColor);
+}
+
+.frame_line_right {
+  right: 0;
+  top: 0;
+  width: var(--frameWidth);
+  height: var(--frameLength);
+  position: absolute;
+  background-color: var(--fontColor);
+}
+
+.frame_line_top {
+  left: 0;
+  top: 0;
+  width: var(--frameLength);
+  height: var(--frameWidth);
+  position: absolute;
+  background-color: var(--fontColor);
+}
+
+.frame_line_bottom {
+  left: 0;
+  bottom: 0;
+  width: var(--frameLength);
+  height: var(--frameWidth);
+  position: absolute;
+  background-color: var(--fontColor);
 }
