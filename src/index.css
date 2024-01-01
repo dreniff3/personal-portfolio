@@ -31,6 +31,8 @@
 
 body {
   background: var(--backgroundColor);
+  font-family: var(--mainFont);
+  color: var(--fontColor);
 }
 
 /*   ----- Frame Component  -----  */
