@@ -1,15 +1,14 @@
 // Import dependencies
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 // Import components
-import Frame from './components/Frame';
 
 function App() {
   return (
     <>
-      <Frame />
       <main>
-        {/* component */}
+        <Outlet />
       </main>
     </>
   )
