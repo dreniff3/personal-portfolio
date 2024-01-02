@@ -35,48 +35,9 @@ body {
   color: var(--fontColor);
 }
 
-/*   ----- Frame Component  -----  */
-.frame {
-  position: fixed;
-  z-index: 10;
-  left: var(--frameMargin);
-  right: var(--frameMargin);
-  top: var(--frameMargin);
-  bottom: var(--frameMargin);
-}
-
-.frame_line_left {
-  left: 0;
-  top: 0;
-  width: var(--frameWidth);
-  height: var(--frameLength);
-  position: absolute;
-  background-color: var(--fontColor);
-}
-
-.frame_line_right {
-  right: 0;
-  top: 0;
-  width: var(--frameWidth);
-  height: var(--frameLength);
-  position: absolute;
-  background-color: var(--fontColor);
-}
-
-.frame_line_top {
-  left: 0;
-  top: 0;
-  width: var(--frameLength);
-  height: var(--frameWidth);
-  position: absolute;
-  background-color: var(--fontColor);
-}
-
-.frame_line_bottom {
-  left: 0;
-  bottom: 0;
-  width: var(--frameLength);
-  height: var(--frameWidth);
-  position: absolute;
-  background-color: var(--fontColor);
+main {
+  border: 1px solid var(--fontColor);
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  margin: 20px;
 }
