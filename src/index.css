@@ -58,7 +58,7 @@ main {
   margin: 25px;
   padding: 3.5rem 1.5rem;
   border-top: 1px solid var(--fontColor);
-  border-bottom: 1px solid var(--fontColor);
+  /* border-bottom: 1px solid var(--fontColor); */
 }
 
 @media screen and (min-width: 600px) {
@@ -71,7 +71,7 @@ main {
 .bio {
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: .2rem;
 }
 
 .bio-header {
@@ -81,7 +81,8 @@ main {
 }
 
 .bio-header > h4 {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
+  font-size: 2rem;
   letter-spacing: 2px;
 }
 
@@ -102,28 +103,26 @@ main {
   cursor: pointer;
 }
 
-.bio > p {
-  margin-bottom: .5rem;
-}
-
 .info-header {
   font-family: var(--mainFont);
-  font-size: .9rem;
-  margin-top: -.4rem;
+  font-size: 1.2rem;
   letter-spacing: .12rem;
+  margin-bottom: 1rem;
 }
 
 .info-description {
   font-family: var(--secondaryFont);
+  font-size: 1.5rem;
 }
 
 .btn-text, .btn-text:visited {
+  font-size: 1.5rem;
   font-family: var(--secondaryFont);
   text-decoration: none;
   color: var(--fontColor);
   /* border-bottom: 1px solid var(--fontColor); */
   position: relative;
-  padding-bottom: 3px;
+  padding: 3px 0;
   /* display: block; */
   width: fit-content;
 }
@@ -148,8 +147,15 @@ main {
 /*   ----- NavLinks  -----  */
 .nav-links {
   font-family: var(--navFont);
-  font-size: 9.5vh;
+  /* font-size: 9.5vh; */
+  font-size: 16vw;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 450px) {
+  .nav-links {
+    font-size: 9.5vh;
+  }
 }
 
 .nav-links > ul {
