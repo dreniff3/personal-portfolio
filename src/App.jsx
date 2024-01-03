@@ -1,21 +1,23 @@
 // Import dependencies
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { IoGlasses, IoGlassesOutline } from 'react-icons/io5';
 
 // Import components
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
     <>
+      <header>
+        <Header />
+      </header>
       <main>
-        <IoGlasses className="toggle-btn" />
-        <IoGlassesOutline 
-          className="toggle-btn" 
-          style={{ display: 'none' }}
-        />
         <Outlet />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }
