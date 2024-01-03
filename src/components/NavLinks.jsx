@@ -8,7 +8,7 @@ const NavLinks = () => {
     ];
 
     return (
-        <nav>
+        <nav className="nav-links">
             <ul>
                 {links.map((link) => {
                     return <li key={link.name}>
