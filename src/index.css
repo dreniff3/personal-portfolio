@@ -3,6 +3,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 /*   ----- Variables  -----  */
 :root {
@@ -12,6 +13,7 @@
 
   /* fonts */
   --mainFont: 'Marcellus SC', sans-serif;
+  --secondaryFont: 'Courier Prime', sans-serif;
   --navFont: 'Aboreto', serif;
 
   /* sizes */
@@ -42,17 +44,133 @@ body {
 /*   ----- Toggle Button  -----  */
 .toggle-btn {
   position: absolute;
-  top: 3px;
-  left: 25px;
-  font-size: 2.5rem;
+  top: 5px;
+  left: 30px;
+  font-size: 3rem;
   background: var(--backgroundColor);
   padding: 0 1px;
+  cursor: pointer;
 }
 
 main {
-  border: 1px solid var(--fontColor);
-  width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
-  margin: 20px;
-  padding: 1.5rem;
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
+  margin: 25px;
+  padding: 3.5rem 1.5rem;
+  border-top: 1px solid var(--fontColor);
+  border-bottom: 1px solid var(--fontColor);
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    border: 1px solid var(--fontColor);
+  }
+}
+
+/*   ----- HomePage  -----  */
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.bio-header {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.bio-header > h4 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.social-links {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.github-logo {
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.linkedin-logo {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.bio > p {
+  margin-bottom: .5rem;
+}
+
+.info-header {
+  font-family: var(--mainFont);
+  font-size: .9rem;
+  margin-top: -.4rem;
+  letter-spacing: .12rem;
+}
+
+.info-description {
+  font-family: var(--secondaryFont);
+}
+
+.btn-text, .btn-text:visited {
+  font-family: var(--secondaryFont);
+  text-decoration: none;
+  color: var(--fontColor);
+  /* border-bottom: 1px solid var(--fontColor); */
+  position: relative;
+  padding-bottom: 3px;
+  /* display: block; */
+  width: fit-content;
+}
+
+.btn-text::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--fontColor);
+  transform-origin: bottom left;
+  transition: transform 0.2s ease-out;
+  transform: scaleX(0);
+}
+
+.btn-text:hover::after {
+  transform: scaleX(1);
+}
+
+/*   ----- NavLinks  -----  */
+.nav-links {
+  font-family: var(--navFont);
+  font-size: 9.5vh;
+  margin-top: 2rem;
+}
+
+.nav-links > ul {
+  list-style: none;
+}
+
+li {
+  width: fit-content;
+  transition: .5s ease-out;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.link:hover {
+  transform: skewX(-10deg);
+}
+
+.nav-links > ul > li:hover {
+  transform: translateX(2%);
 }
