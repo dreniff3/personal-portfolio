@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const NavLinks = () => {
-    let links = [
-        { name: 'Info', href: 'info' },
-        { name: 'Projects', href: 'projects' },
-        { name: 'Contact', href: 'contact' },
-    ];
-
+const NavLinks = ({ links }) => {
     return (
         <nav className="nav-links">
             <ul>
