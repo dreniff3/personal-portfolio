@@ -19,8 +19,11 @@ const HomePage = () => {
                         <IoLogoLinkedin className="linkedin-logo" />
                     </div>
                 </div>
-                <p className="info-header">Computer Science Student / Full-Stack Developer</p>
-                <p className="info-description">Currently enrolled in Oregon State University's post-bacc online Computer Science program.</p>
+                <div className="home-info-description-container">
+                    <p className="info-header">Computer Science Student / Full-Stack Developer</p>
+                    <p className="info-description">Currently enrolled in Oregon State University's post-bacc online Computer Science program.</p>
+                    <p className="info-description">I am a motivated learner who loves problem solving and cares about writing clean, readable, well-documented and efficient code.</p>
+                </div>
                 <a href="resume" className="btn-text">View my resume &rarr;</a>
             </div>
 
