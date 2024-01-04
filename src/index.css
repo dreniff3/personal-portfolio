@@ -158,33 +158,38 @@ footer {
   transform: scaleX(1);
 }
 
+
 .small {
   font-size: 1.2rem;
 }
 
 /*   ----- Info/About  -----  */
-.info-description--long {
-  font-size: .9rem;
-  font-family: var(--secondaryFont);
+.info-description-container {
+  height: 3rem;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.show {
+  height: 100%;
+}
+
+.long {
+  font-size: .9rem;
   padding-bottom: 1rem;
 }
 
+.show-btn {
+  border: none;
+  background-color: inherit;
+  width: fit-content;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
 .skills {
-  padding-left: .5rem;
   width: 80vw;
-}
-
-.skills-header {
-  display: flex;
-  align-items: center;
-  gap: .3rem;
-}
-
-.skills-header > h5 {
-  font-size: 1.7rem;
-  letter-spacing: 2px;
+  position: relative;
 }
 
 .line {
@@ -194,12 +199,28 @@ footer {
   background: var(--fontColor);
 }
 
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  position: absolute;
+  top: -2px;
+  left: 5px;
+  background: var(--backgroundColor);
+}
+
+.skills-header > h5 {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
 .skills-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 10px;
   margin-right: 40px;
+  margin-top: 1rem;
 }
 
 /*   ----- SkillList Component -----  */
