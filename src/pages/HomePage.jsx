@@ -3,6 +3,12 @@ import { DiGithubFull } from 'react-icons/di';
 import { IoLogoLinkedin } from 'react-icons/io5';
 
 const HomePage = () => {
+    let links = [
+        { name: 'Info', href: 'info' },
+        { name: 'Projects', href: 'projects' },
+        { name: 'Contact', href: 'contact' },
+    ];
+
     return (
         <>
             <div className="bio">
@@ -18,7 +24,7 @@ const HomePage = () => {
                 <a href="resume" className="btn-text">View my resume &rarr;</a>
             </div>
 
-            <NavLinks />
+            <NavLinks links={links} />
         </>
     );
 };
