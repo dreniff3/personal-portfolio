@@ -115,6 +115,14 @@ footer {
   cursor: pointer;
 }
 
+.home-info-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+}
+
 .info-header {
   font-family: var(--mainFont);
   font-size: 1.2rem;
@@ -124,7 +132,7 @@ footer {
 
 .info-description {
   font-family: var(--secondaryFont);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -164,27 +172,60 @@ footer {
 }
 
 /*   ----- Info/About  -----  */
-.info-description-container {
-  height: 3rem;
+.about-info-description-container {
+  height: 3.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* display: flex;
+  flex-direction: column;
+  gap: .7rem; */
 }
 
 .show {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
 }
 
 .long {
-  font-size: .9rem;
-  padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
-.show-btn {
+.show > .long {
+  line-height: 1.4rem;
+}
+
+.show-btn--text {
   border: none;
   background-color: inherit;
   width: fit-content;
-  margin-bottom: 1rem;
+  margin: -.1rem 0 1rem 0;
   letter-spacing: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.ellipsis {
+  margin-top: -.3rem;
+}
+
+.ellipsis::after {
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--fontColor);
+  transform-origin: bottom left;
+  transition: transform 0.2s ease-out;
+  transform: scaleX(0);
+}
+
+.ellipsis:hover::after {
+  transform: scaleX(1);
 }
 
 .skills {
@@ -197,6 +238,16 @@ footer {
   height: 1px;
   width: 100%;
   background: var(--fontColor);
+}
+
+.show-btn--skills {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1.3rem;
+  border: none;
+  background: var(--backgroundColor);
+  cursor: pointer;
 }
 
 .skills-header {
@@ -212,6 +263,10 @@ footer {
 .skills-header > h5 {
   font-size: 1.6rem;
   letter-spacing: 2px;
+}
+
+.empty {
+  margin-bottom: 1.8rem;
 }
 
 .skills-list {
