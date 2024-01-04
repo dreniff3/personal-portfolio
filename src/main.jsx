@@ -8,6 +8,7 @@ import './index.css'
 // Import pages
 import HomePage from './pages/HomePage.jsx';
 import Resume from './pages/Resume.jsx';
+import About from './pages/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "resume", element: <Resume /> },
+      { path: "info", element: <About /> },
     ]
   },
 ])
