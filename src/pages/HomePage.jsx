@@ -1,4 +1,5 @@
 import NavLinks from '../components/NavLinks';
+import ResumeButton from '../components/ResumeButton';
 import { DiGithubFull } from 'react-icons/di';
 import { IoLogoLinkedin } from 'react-icons/io5';
 
@@ -21,10 +22,10 @@ const HomePage = () => {
                 </div>
                 <div className="home-info-description-container">
                     <p className="info-header">Computer Science Student / Full-Stack Developer</p>
-                    <p className="info-description">Currently enrolled in Oregon State University's post-bacc online Computer Science program.</p>
-                    <p className="info-description">I am a motivated learner who loves problem solving and cares about writing clean, readable, well-documented and efficient code.</p>
+                    <p className="info-description">A passionate learner with a growth mindset, currently enrolled in Oregon State University's post-bacc online Computer Science program.</p>
+                    {/* <p className="info-description">I am a motivated learner who loves problem solving and cares about writing clean, readable, well-documented and efficient code.</p> */}
                 </div>
-                <a href="resume" className="btn-text">View my resume &rarr;</a>
+                <ResumeButton />
             </div>
 
             <NavLinks links={links} />
