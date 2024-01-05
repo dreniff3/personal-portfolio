@@ -6,6 +6,7 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 // Import components
 import SkillList from '../components/SkillList';
+import ResumeButton from '../components/ResumeButton';
 
 const About = () => {
     let links = [
@@ -41,7 +42,9 @@ const About = () => {
                     <p className="info-description long">As a Computer Science student, I have consistently demonstrated high levels of collaboration and strong communication working with other students on large group projects. I have experience with relational databases and a strong interest in Full Stack Web Development.</p>
                 </div>
                 <button className={hideText ? "show-btn--text ellipsis" : "show-btn--text"} onClick={toggleText}>{hideText ? "..." : <IoIosArrowUp />}</button>
-                <div className="skills">
+            </div>
+            <ResumeButton />
+            <div className="skills">
                     <span className="line"></span>
                     <button 
                         className="show-btn--skills"
@@ -68,9 +71,7 @@ const About = () => {
                                         />
                                     </div>
                     }
-                    <a href="resume" className="btn-text small">View my resume &rarr;</a>
                 </div>
-            </div>
             <NavLinks links={links} />
         </>
     );
