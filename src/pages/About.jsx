@@ -19,10 +19,8 @@ const About = () => {
     let frameworks = ['Express.js', 'Flask', 'React'];
     let other = ['Node.js', 'MongoDB', 'MySQL', 'Git', 'Visual Studio Code'];
 
-    const [hideText, setHideText] = useState(true);
     const [hideSkills, setHideSkills] = useState(true);
 
-    const toggleText = () => setHideText(!hideText);
     const toggleSkills = () => setHideSkills(!hideSkills);
 
     return (
@@ -35,15 +33,13 @@ const About = () => {
                         <IoLogoLinkedin className="linkedin-logo" />
                     </div>
                 </div>
-                <p className="info-header">A passionate learner with a growth mindset</p>
-                <div className={hideText ? "about-info-description-container" : "about-info-description-container show"}>
-                    <p className="info-description long">I am a second year student enrolled in Oregon State University's online post-bacc Computer Science program, and I'm looking for an internship for next summer or beyond to gain experience in a professional setting and to learn more about the software development lifecycle.</p>
-                    <p className="info-description long">I am a motivated learner who loves problem solving and cares about writing clean, readable, well-documented and efficient code.</p>
-                    <p className="info-description long">As a Computer Science student, I have consistently demonstrated high levels of collaboration and strong communication working with other students on large group projects. I have experience with relational databases and a strong interest in Full Stack Web Development.</p>
+                <div className="home-info-description-container">
+                    <p className="info-header">Computer Science Student / Full-Stack Developer</p>
+                    <p className="info-description">A passionate learner with a growth mindset, currently enrolled in Oregon State University's post-bacc online Computer Science program.</p>
+                    {/* <p className="info-description">I am a motivated learner who loves problem solving and cares about writing clean, readable, well-documented and efficient code.</p> */}
                 </div>
-                <button className={hideText ? "show-btn--text ellipsis" : "show-btn--text"} onClick={toggleText}>{hideText ? "..." : <IoIosArrowUp />}</button>
+                <ResumeButton />
             </div>
-            <ResumeButton />
             <div className="skills">
                     <span className="line"></span>
                     <button 
