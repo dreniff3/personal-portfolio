@@ -24,23 +24,20 @@ const About = () => {
     const toggleSkills = () => setHideSkills(!hideSkills);
 
     return (
-        <>
-            <div className="bio">
-                <div className="bio-header">
-                    <h4>Don Reniff</h4>
-                    <div className="social-links">
-                        <DiGithubFull className="github-logo" />
-                        <IoLogoLinkedin className="linkedin-logo" />
+        <div className="about-page">
+            <NavLinks links={links} />
+            <div className="about-container">
+                <span className="line"></span>
+                <div className="about-header">
+                        <h5>Info</h5>
                     </div>
-                </div>
-                <div className="home-info-description-container">
-                    <p className="info-header">Computer Science Student / Full-Stack Developer</p>
-                    <p className="info-description">A passionate learner with a growth mindset, currently enrolled in Oregon State University's post-bacc online Computer Science program.</p>
-                    {/* <p className="info-description">I am a motivated learner who loves problem solving and cares about writing clean, readable, well-documented and efficient code.</p> */}
-                </div>
+                <p className="about-text">
+                A passionate learner with a growth mindset, currently enrolled in Oregon State University's post-bacc online Computer Science program.
+                </p>
                 <ResumeButton />
             </div>
-            <div className="skills">
+            
+            <div className="skills-container">
                     <span className="line"></span>
                     <button 
                         className="show-btn--skills"
@@ -68,8 +65,8 @@ const About = () => {
                                     </div>
                     }
                 </div>
-            <NavLinks links={links} />
-        </>
+
+        </div>
     );
 };
 
