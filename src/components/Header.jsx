@@ -4,7 +4,7 @@ import { IoLogoLinkedin } from 'react-icons/io5';
 
 const Header = () => {
     return (
-        <>
+        <div className="header">
             <IoGlasses className="toggle-btn" />
             <IoGlassesOutline 
             className="toggle-btn" 
@@ -20,7 +20,7 @@ const Header = () => {
                 </div>
                 <p className="roles">Computer Science Student / Full-Stack Developer</p>
             </div>
-        </>
+        </div>
     );
 };
 
