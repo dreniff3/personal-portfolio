@@ -46,6 +46,18 @@ html {
   position: relative;
 }
 
+/* body {
+  background: var(--backgroundColor);
+  font-family: var(--mainFont);
+  color: var(--fontColor);
+}
+
+.dark {
+  background: var(--fontColor);
+  font-family: var(--mainFont);
+  color: var(--backgroundColor);
+} */
+
 body {
   background: var(--backgroundColor);
   font-family: var(--mainFont);
@@ -57,17 +69,51 @@ a {
   color: inherit;
 }
 
-/*   ----- Header  -----  */
-.header {
-  /* width: 100%;
-  height: fit-content;
-  z-index: 90;
+.App {
+  width: 100%;
+  height: 100vh;
   background-color: var(--backgroundColor);
-  overflow: hidden; */
+  /* font-family: var(--mainFont);
+  color: var(--backgroundColor); */
+}
+
+[data-theme="dark"] {
+  background: var(--fontColor);
+  color: var(--backgroundColor);
 }
 
 /*   ----- Toggle Button  -----  */
+.toggle-container {
+  position: absolute;
+  width: fit-content;
+  top: -25px;
+  right: 30px;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle + label {
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
 .toggle-btn {
+  transition: .2s ease-in-out;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.toggle-btn:active {
+  transform: scale(0.9);
+}
+
+/*  old  */
+
+/* .toggle-btn {
   width: fit-content;
   position: absolute;
   top: 5px;
@@ -81,6 +127,15 @@ a {
 
 .toggle-btn:hover {
   transform: scale(1.1);
+} */
+
+/*   ----- Header  -----  */
+.header {
+  /* width: 100%;
+  height: fit-content;
+  z-index: 90;
+  background-color: var(--backgroundColor);
+  overflow: hidden; */
 }
 
 .hero-container {
@@ -108,11 +163,12 @@ a {
   /* gap: var(--smallMargin); */
   gap: 0.3rem;
   align-items: center;
-  color: var(--fontColorSecondary);
+  color: inherit;
 }
 
 .social-links > a {
   transform: var(--transition);
+  color: var(--fontColorSecondary);
 }
 
 .github-logo {
@@ -121,7 +177,8 @@ a {
 }
 
 .social-links > a:hover {
-  color: var(--fontColor);
+  /* color: var(--fontColor); */
+  color: inherit;
   transform: scale(1.1);
 }
 
@@ -140,18 +197,26 @@ a {
 
 /*   ----- Main  -----  */
 main {
-  width: calc(100vw - 50px);
-  height: calc(100vh - 50px);
-  margin: var(--mainMargin);
-  border-top: 1px solid var(--fontColor);
-  padding: 4rem .5rem;
+  /* width: calc(100vw - 50px);
+  height: calc(100vh - 50px); */
+  /* margin: var(--mainMargin); */
+  /* border-top: 1px solid var(--fontColor); */
+  /* padding: 4rem .5rem; */
   /* overflow: auto; */
   /* position: relative; */
   overflow: hidden;
 }
 
+.main-container {
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
+  padding: 4rem .5rem;
+  margin: var(--mainMargin);
+  border-top: 1px solid var(--fontColor);
+}
+
 @media screen and (min-width: 600px) {
-  main {
+  .main-container {
     border: 1px solid var(--fontColor);
     padding: 3.5rem 1.5rem;
   }
@@ -190,7 +255,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 
 .about-container {
@@ -211,9 +276,9 @@ footer {
   align-items: center;
   gap: .3rem;
   position: absolute;
-  top: -2px;
+  top: -18px;
   left: 5px;
-  background: var(--backgroundColor);
+  /* background: var(--backgroundColor); */
 }
 
 .about-header > h5 {
@@ -225,7 +290,7 @@ footer {
 
 .about-text {
   padding-left: 15px;
-  margin: 42px 1rem 1.3rem;
+  margin: 23px 1rem 1.3rem;
 }
 
 .skills-container {
@@ -245,10 +310,12 @@ footer {
   width: fit-content;
   position: absolute;
   right: 5px;
-  top: 5px;
+  top: 18px;
   font-size: 1.3rem;
   border: none;
-  background: var(--backgroundColor);
+  /* background: var(--backgroundColor); */
+  background: inherit;
+  color: inherit;
   cursor: pointer;
   transition: .2s ease-in-out;
 }
@@ -257,14 +324,18 @@ footer {
   transform: scale(1.2);
 }
 
+.show-btn--skills:active {
+  transform: scale(0.5);
+}
+
 .skills-header {
   display: flex;
   align-items: center;
   gap: .3rem;
   position: absolute;
-  top: -2px;
+  top: -18px;
   left: 5px;
-  background: var(--backgroundColor);
+  /* background: var(--backgroundColor); */
 }
 
 .skills-header > h5 {
@@ -345,10 +416,12 @@ footer {
   font-size: .9rem;
   letter-spacing: 1px;
   /* color: var(--highlightBlue--dark); */
+  color: var(--fontColor);
 }
 
 .skill:hover {
-  color: var(--fontColor);
+  /* color: var(--fontColor); */
+  color: inherit;
   /* color: var(--highlightBlue); */
   transform: scale(1.1);
 }
@@ -380,7 +453,8 @@ footer {
   font-size: .875rem;
   font-family: var(--secondaryFont);
   text-decoration: none;
-  color: var(--fontColor);
+  /* color: var(--fontColor); */
+  color: inherit;
 }
 
 .resume-btn::after {
@@ -419,7 +493,7 @@ footer {
 .resume-page > .nav-links {
   font-size: 1.1rem;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 35px;
 }
 
@@ -444,6 +518,7 @@ footer {
 .projects-page > .nav-links > ul > li,
 .resume-page > .nav-links > ul > li {
   position: relative;
+  /* color: var(--fontColor); */
 }
 
 .about-page > .nav-links > ul > li:not(:last-child):after,
@@ -528,7 +603,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 
 .projects-container {
@@ -549,9 +624,10 @@ li {
   align-items: center;
   gap: .3rem;
   position: absolute;
-  top: -2px;
+  top: -18px;
   left: 5px;
-  background: var(--backgroundColor);
+  /* background: var(--backgroundColor); */
+  background: inherit;
 }
 
 .projects-header > h5 {
@@ -596,6 +672,7 @@ li {
   align-items: center;
   gap: 0.5rem;
   margin-top: 3px;
+  color: inherit;
 }
 
 .link-logo {
@@ -604,7 +681,8 @@ li {
 }
 
 .link-logo:hover {
-  color: var(--fontColor);
+  /* color: var(--fontColor); */
+  color: inherit;
   transform: scale(1.1);
 } 
 
@@ -615,7 +693,8 @@ li {
 }
 
 .slider-links > .github-logo:hover {
-  color: var(--fontColor);
+  /* color: var(--fontColor); */
+  color: inherit;
   transform: scale(1.1);
 }
 
@@ -711,7 +790,8 @@ li {
 
 .contact-link:hover {
   left: 52%;
-  color: var(--fontColorSecondary);
+  /* color: var(--fontColorSecondary); */
+  color: inherit;
 }
 
 .contact-page > .nav-links > ul {
@@ -722,6 +802,7 @@ li {
 
 .contact-page > .nav-links > ul > li {
   position: relative;
+  /* color: var(--fontColor); */
 }
 
 .contact-page > .nav-links > ul > li:not(:last-child):after {
@@ -744,3 +825,5 @@ li {
 .contact-page > .nav-links > ul > li:hover {
   transform: none;
 }
+
+/* dark mode */
