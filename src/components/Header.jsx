@@ -5,11 +5,11 @@ import { IoLogoLinkedin } from 'react-icons/io5';
 const Header = () => {
     return (
         <div className="header">
-            <IoGlasses className="toggle-btn" />
+            {/* <IoGlasses className="toggle-btn" />
             <IoGlassesOutline 
             className="toggle-btn" 
             style={{ display: 'none' }}
-            />
+            /> */}
             <div className="hero-container">
                 <div className="hero">
                     <h4>Don Reniff</h4>
