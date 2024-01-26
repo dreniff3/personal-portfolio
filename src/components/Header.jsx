@@ -14,8 +14,12 @@ const Header = () => {
                 <div className="hero">
                     <h4>Don Reniff</h4>
                     <div className="social-links">
-                        <DiGithubFull className="github-logo" />
-                        <IoLogoLinkedin className="linkedin-logo" />
+                        <a href="https://github.com/dreniff3">
+                            <DiGithubFull className="github-logo" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/don-reniff/">
+                            <IoLogoLinkedin className="linkedin-logo" />
+                        </a>
                     </div>
                 </div>
                 <p className="roles">Computer Science Student / Full-Stack Developer</p>
