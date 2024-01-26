@@ -111,6 +111,27 @@ a {
   transform: scale(0.9);
 }
 
+@media screen and (min-width: 700px) {
+  .toggle-container {
+    top: -40px;
+    right: 32px;
+  }
+
+  .toggle + label {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .toggle-container {
+    top: -62px;
+  }
+
+  .toggle + label {
+    font-size: 4rem;
+  }
+}
+
 /*  old  */
 
 /* .toggle-btn {
@@ -146,6 +167,20 @@ a {
   left: 35px;
 }
 
+
+@media screen and (min-width: 1100px) {
+  .hero-container {
+    top: 15.75rem;
+    left: 10.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    left: 19.5%;
+  }
+}
+
 .hero {
   display: flex;
   gap: var(--smallMargin);
@@ -156,6 +191,17 @@ a {
   font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+
+@media screen and (min-width: 1100px) {
+  .hero {
+    gap: calc(var(--smallMargin) + 0.5rem);
+  }
+
+  .hero > h4 {
+    font-size: 2rem;
+  }
 }
 
 .social-links {
@@ -187,12 +233,32 @@ a {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1100px) {
+  .social-links {
+    gap: 0.8rem;
+  }
+
+  .github-logo {
+    font-size: 2.8rem;
+  }
+
+  .linkedin-logo {
+    font-size: 1.4rem;
+  }
+}
+
 .roles {
   font-family: var(--mainFont);
   color: var(--fontColorTertiary);
   font-size: 1rem;
   width: 60%;
   margin-top: -5px;
+}
+
+@media screen and (min-width: 1100px) {
+  .roles {
+    font-size: 1.2rem;
+  }
 }
 
 /*   ----- Main  -----  */
@@ -247,6 +313,12 @@ footer {
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     left: 50%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .homepage {
+    left: 55%;
   }
 }
 
@@ -485,6 +557,12 @@ footer {
   letter-spacing: .25rem;
   font-size: 3rem;
   margin-bottom: var(--mainMargin);
+}
+
+@media screen and (min-width: 1100px) {
+  .nav-links {
+    font-size: 4rem;
+  }
 }
 
 .about-page > .nav-links,
