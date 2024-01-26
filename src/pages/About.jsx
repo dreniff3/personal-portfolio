@@ -11,8 +11,8 @@ import ResumeButton from '../components/ResumeButton';
 const About = () => {
     let links = [
         { name: 'Home', href: '/' },
-        { name: 'Projects', href: 'projects' },
-        { name: 'Contact', href: 'contact' },
+        { name: 'Projects', href: '/projects' },
+        { name: 'Contact', href: '/contact' },
     ];
 
     let languages = ['Python', 'JavaScript', 'SQL', 'HTML/CSS'];
