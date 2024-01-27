@@ -124,7 +124,8 @@ a {
 
 @media screen and (min-width: 1100px) {
   .toggle-container {
-    top: -62px;
+    top: -55px;
+    right: 20px;
   }
 
   .toggle + label {
@@ -288,6 +289,13 @@ main {
   }
 }
 
+@media screen and (min-width: 1100px) {
+  .main-container {
+    margin-top: calc(var(--mainMargin) + 0.5rem);
+    height: calc(100vh - 55px);
+  }
+}
+
 /*   ----- Footer  -----  */
 footer {
   display: flex;
@@ -328,6 +336,12 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-top: 2.5rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .about-page {
+    padding: 2.5rem 5% 0 45%;
+  }
 }
 
 .about-container {
@@ -428,6 +442,35 @@ footer {
   margin: 1.8rem 1rem;
 }
 
+@media screen and (min-width: 1100px) {
+  .about-header {
+    top: -25px;
+    left: 10px;
+  }
+
+  .about-header > h5 {
+    font-size: 2.2rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .skills-header {
+    top: -25px;
+    left: 10px;
+  }
+  
+  .skills-header > h5 {
+    font-size: 2.2rem;
+  }
+
+  .skills-list {
+    margin-left: 33%;
+  }
+}
+
 /*   ----- SkillList Component -----  */
 .category-container {
   margin: .25rem 0;
@@ -439,6 +482,12 @@ footer {
   position: relative;
   width: fit-content;
   margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .category-title {
+    font-size: 1.3rem;
+  }
 }
 
 .category-title::after {
@@ -459,6 +508,12 @@ footer {
   gap: 0.1rem;
 }
 
+@media screen and (min-width: 1100px) {
+  .category-list {
+    gap: 1.2rem;
+  }
+}
+
 .skill-wrapper {
   position: relative;
   padding-right: 2rem;
@@ -469,6 +524,12 @@ footer {
   font-size: 1.8rem;
   color: var(--fontColorSecondary);
   transition: all 0.2s ease-in;
+}
+
+@media screen and (min-width: 1100px) {
+  .skill-wrapper {
+    padding-right: 0;
+  }
 }
 
 .hoverBubble {
@@ -550,6 +611,12 @@ footer {
   font-size: .8rem;
 }
 
+@media screen and (min-width: 1100px) {
+  .btn-text, .btn-text--arrow {
+    font-size: 1.1rem;
+  }
+}
+
 /*   ----- NavLinks Component -----  */
 .nav-links {
   font-family: var(--navFont);
@@ -575,6 +642,15 @@ footer {
   left: 35px;
 }
 
+@media screen and (min-width: 1100px) {
+  .about-page > .nav-links,
+  .projects-page > .nav-links,
+  .contact-page > .nav-links,
+  .resume-page > .nav-links {
+    font-size: 1.3rem;
+  }
+}
+
 .resume-page > .nav-links {
   font-size: 0.9rem;
   top: 2px;
@@ -590,6 +666,18 @@ footer {
 
 .resume-page > .nav-links > ul {
   gap: 20px;
+}
+
+@media screen and (min-width: 1100px) {
+  .about-page > .nav-links > ul,
+  .projects-page > .nav-links > ul,
+  .resume-page > .nav-links > ul {
+    gap: 40px;
+  }
+
+  .resume-page > .nav-links > ul {
+    gap: 25px;
+  }
 }
 
 .about-page > .nav-links > ul > li,
@@ -684,6 +772,12 @@ li {
   padding-top: 2.5rem;
 }
 
+@media screen and (min-width: 1100px) {
+  .projects-page {
+    padding: 2.5rem 5% 0 45%;
+  }
+}
+
 .projects-container {
   width: 100%;
   position: relative;
@@ -713,6 +807,17 @@ li {
   letter-spacing: 1.5px;
   font-family: var(--navFont);
   padding: 0 0.15rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .projects-header {
+    top: -28px;
+    left: 10px;
+  }
+  
+  .projects-header > h5 {
+    font-size: 2.2rem;
+  }
 }
 
 /*   ----- Carousel Component  -----  */
@@ -808,6 +913,36 @@ li {
   /* padding-left: 0.5rem; */
 }
 
+.dots {
+  margin-top: 400px;
+  margin-left: 48%;
+}
+
+.dots > ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.dot {
+  padding: 0 0.5rem;
+}
+
+.filled-dot {
+  transform: scale(1.3);
+}
+
+.empty-dot {
+  color: var(--fontColorTertiary);
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 1100px) {
+  .dots {
+    margin-top: 480px;
+    margin-left: 46%;
+  }
+}
+
 .prev, .next {
   position: absolute;
   top: 400px;
@@ -843,12 +978,61 @@ li {
   transform: scale(1.2) translateX(2px);
 }
 
+@media screen and (min-width: 1100px) {
+  .slider-img {
+    height: 250px;
+    margin-top: 0.5rem;
+  }
+
+  .slider-header {
+    gap: 0.7rem;
+  }
+  
+  .slider-name {
+    font-size: 1.3rem;
+  }
+  
+  .slider-links {
+    gap: 0.7rem;
+  }
+  
+  .link-logo {
+    font-size: 1.1rem;
+  }
+  
+  .slider-links > .github-logo {
+    font-size: 2.8rem;
+  }
+  
+  .slider-stack > ul {
+    font-size: 1rem;
+  }
+
+  .slider-desc {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  .prev, .next {
+    top: 480px;
+    font-size: 1.5rem;
+  }
+}
+
 /*   ----- Contact  -----  */
 .contact-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50%;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+@media screen and (min-width: 1100px) {
+  .contact-page {
+    margin-top: 80px;
+    padding: 2.5rem 5% 0 45%;
+  }
 }
 
 .contact-container {
@@ -864,6 +1048,18 @@ li {
   color: var(--fontColorTertiary);
   transform: translateX(-50%);
   transition: var(--transition);
+}
+
+@media screen and (min-width: 800px) {
+  .contact-link {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .contact-link {
+    font-size: 9rem;
+  }
 }
 
 .contact-link:hover {
