@@ -86,6 +86,19 @@ const Carousel = () => {
             >
                 <FiChevronLeft />
             </button>
+
+            <div className="dots">
+                {list.map((project, index) => {
+                        return (
+                            <ul>
+                                <li key={index} className={index === currentProject ? "dot filled-dot" : "dot empty-dot"}>
+                                    {index === currentProject ? "● " : "○ "}
+                                </li>
+                            </ul>
+                        );
+                    })}
+            </div>
+
             <button 
                 type="button" 
                 className="next"
