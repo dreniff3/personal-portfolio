@@ -43,7 +43,9 @@ const About = () => {
                         className="show-btn--skills"
                         onClick={toggleSkills}
                     >
-                        <IoIosArrowDown />
+                        {hideSkills ? 
+                        <IoIosArrowDown /> : 
+                        <IoIosArrowUp />}
                     </button>
                     <div className="skills-header">
                         <h5>Skills</h5>
