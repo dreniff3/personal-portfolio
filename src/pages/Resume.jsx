@@ -18,17 +18,21 @@ const Resume = () => {
         <div className="resume-page">
             <NavLinks links={links} />
             <div className="resume-container">
-                <Document 
-                    file={ resume } 
-                    onLoadError={console.error}
-                    style={{ width: '100vw', height: 'auto' }}
-                > 
-                    <Page 
-                        pageNumber={1}
-                        pageIndex={0} 
-                        renderTextLayer={false}
-                    />
-                </Document>
+                {<Document/> ? (
+                    <Document 
+                        file={ resume } 
+                        onLoadError={console.error}
+                        style={{ width: '100vw', height: 'auto' }}
+                    > 
+                        <Page 
+                            pageNumber={1}
+                            pageIndex={0} 
+                            renderTextLayer={false}
+                        />
+                    </Document>
+                ) : (
+                    <a href={resume}>Download</a>
+                )}
             </div>
         </div>
     );
