@@ -934,11 +934,11 @@ li {
   object-fit: contain;
 }
 
-/* @media screen and (min-width: 850px) {
+@media screen and (min-width: 950px) {
   .slider-img {
     height: 200px;
   }
-} */
+}
 
 .slider-header {
   display: flex;
