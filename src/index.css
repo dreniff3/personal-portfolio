@@ -928,15 +928,19 @@ li {
 }
 
 .slider-img {
-  width: fit-content;
-  height: 150px;
-  margin: 1rem 0 -0.5rem;
+  width: 100%;
+  height: auto;
+  /* width: fit-content;
+  height: 150px; */
+  /* margin: 1rem 0 -0.5rem; */
   object-fit: contain;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 750px) {
   .slider-img {
+    width: fit-content;
     height: 200px;
+    margin: 1rem 0 -0.5rem;
   }
 }
 
