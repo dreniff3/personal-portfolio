@@ -3,11 +3,20 @@ import { FaLink } from "react-icons/fa";
 import { DiGithubFull } from 'react-icons/di';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import battleshipImg from '../images/battleship.png';
+import combatTrackerImg from '../images/combat_tracker_example.png';
 import dreamofferImg from '../images/dreamoffer.png';
 import workoutImg from '../images/workoutlog.png';
 
 const Carousel = () => {
     let list = [
+        {
+            src: combatTrackerImg,
+            name: 'Combat Tracker',
+            link: 'https://combat-tracker.onrender.com/',
+            github: 'https://github.com/dreniff3/Combat-Tracker',
+            stack: ['HTML', 'CSS', 'JavaScript', 'React'],
+            desc: 'Combat Tracker is a simple tool for tracking combat encounters in tabletop roleplaying games.',
+        },
         {
             src: dreamofferImg,
             name: 'DreamOffer',
