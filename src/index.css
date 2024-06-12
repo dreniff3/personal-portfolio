@@ -1026,6 +1026,10 @@ li {
     top: 480px;
     font-size: 1.5rem;
   }
+
+  .dots {
+    top: 480px;
+  }
 }
 
 /*   ----- Contact  -----  */
